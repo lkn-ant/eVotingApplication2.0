@@ -55,6 +55,7 @@
             this.btnNewElection.TabIndex = 5;
             this.btnNewElection.Text = "New Election";
             this.btnNewElection.UseVisualStyleBackColor = true;
+            this.btnNewElection.Click += new System.EventHandler(this.btnNewElection_Click);
             // 
             // pictureBox1
             // 

@@ -14,12 +14,13 @@ namespace eVoting_Application
     public partial class ElectionStartup : Form
     {
         public bool openNextForm;
-        public string electionID = null;
+        public static string electionID = null;
         public ElectionStartup()
         {
             InitializeComponent();
             openNextForm = false;
             FillLoadElectionBox();
+            lblElectionStatus.Visible = false;
         }
 
         private void FillLoadElectionBox()
@@ -111,6 +112,15 @@ namespace eVoting_Application
             {
                 this.Hide();
             }
+        }
+
+        private void btnNewElection_Click(object sender, EventArgs e)
+        {
+            openNextForm = true;
+            int newSetup = 1;
+            ElectionSetup es = new ElectionSetup(newSetup);
+            es.ShowDialog();
+            this.Hide();
         }
     }
 }

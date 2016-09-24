@@ -152,9 +152,7 @@
             "15",
             "16",
             "17",
-            "18",
-            "19",
-            "20"});
+            "18"});
             this.cbxNumOfCandidates.Location = new System.Drawing.Point(319, 174);
             this.cbxNumOfCandidates.Name = "cbxNumOfCandidates";
             this.cbxNumOfCandidates.Size = new System.Drawing.Size(150, 26);
