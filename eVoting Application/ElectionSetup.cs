@@ -15,6 +15,8 @@ namespace eVoting_Application
         public ElectionSetup()
         {
             InitializeComponent();
+            Application.Run(new ElectionStartup());
+            this.Hide();
         }
 
         private void ElectionSetup_Load(object sender, EventArgs e)

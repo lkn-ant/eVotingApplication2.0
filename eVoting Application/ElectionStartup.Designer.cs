@@ -29,34 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ElectionStartup));
-            this.btnExit = new System.Windows.Forms.Button();
             this.btnLoadElection = new System.Windows.Forms.Button();
             this.btnNewElection = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbxLoadElection = new System.Windows.Forms.ComboBox();
+            this.lblElectionStatus = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnExit
-            // 
-            this.btnExit.Location = new System.Drawing.Point(10, 141);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(150, 55);
-            this.btnExit.TabIndex = 4;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            // 
             // btnLoadElection
             // 
-            this.btnLoadElection.Location = new System.Drawing.Point(166, 141);
+            this.btnLoadElection.Location = new System.Drawing.Point(12, 145);
             this.btnLoadElection.Name = "btnLoadElection";
             this.btnLoadElection.Size = new System.Drawing.Size(150, 55);
             this.btnLoadElection.TabIndex = 5;
             this.btnLoadElection.Text = "Load Election";
             this.btnLoadElection.UseVisualStyleBackColor = true;
+            this.btnLoadElection.Click += new System.EventHandler(this.btnLoadElection_Click);
             // 
             // btnNewElection
             // 
-            this.btnNewElection.Location = new System.Drawing.Point(320, 141);
+            this.btnNewElection.Location = new System.Drawing.Point(322, 145);
             this.btnNewElection.Name = "btnNewElection";
             this.btnNewElection.Size = new System.Drawing.Size(150, 55);
             this.btnNewElection.TabIndex = 5;
@@ -73,30 +66,53 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // cbxLoadElection
+            // 
+            this.cbxLoadElection.FormattingEnabled = true;
+            this.cbxLoadElection.Location = new System.Drawing.Point(12, 118);
+            this.cbxLoadElection.Name = "cbxLoadElection";
+            this.cbxLoadElection.Size = new System.Drawing.Size(150, 21);
+            this.cbxLoadElection.TabIndex = 7;
+            this.cbxLoadElection.SelectedIndexChanged += new System.EventHandler(this.cbxLoadElection_SelectedIndexChanged);
+            // 
+            // lblElectionStatus
+            // 
+            this.lblElectionStatus.AutoSize = true;
+            this.lblElectionStatus.Location = new System.Drawing.Point(12, 207);
+            this.lblElectionStatus.Name = "lblElectionStatus";
+            this.lblElectionStatus.Size = new System.Drawing.Size(118, 13);
+            this.lblElectionStatus.TabIndex = 8;
+            this.lblElectionStatus.Text = "Complete or Incomplete";
+            // 
             // ElectionStartup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(484, 261);
+            this.Controls.Add(this.lblElectionStatus);
+            this.Controls.Add(this.cbxLoadElection);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnNewElection);
             this.Controls.Add(this.btnLoadElection);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ElectionStartup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ElectionStartup";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ElectionStartup_FormClosing);
+            this.Load += new System.EventHandler(this.ElectionStartup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnLoadElection;
         private System.Windows.Forms.Button btnNewElection;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cbxLoadElection;
+        private System.Windows.Forms.Label lblElectionStatus;
     }
 }

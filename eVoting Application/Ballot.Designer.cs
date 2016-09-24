@@ -47,14 +47,14 @@
             this.lblCand04b = new System.Windows.Forms.Label();
             this.lblCand05b = new System.Windows.Forms.Label();
             this.lblCand06b = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCand01 = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnCand02 = new System.Windows.Forms.Button();
+            this.btnCand03 = new System.Windows.Forms.Button();
+            this.btnCand04 = new System.Windows.Forms.Button();
+            this.btnCand05 = new System.Windows.Forms.Button();
+            this.btnCand06 = new System.Windows.Forms.Button();
             this.pbxCand07a = new System.Windows.Forms.PictureBox();
             this.pbxCand08a = new System.Windows.Forms.PictureBox();
             this.pbxCand09a = new System.Windows.Forms.PictureBox();
@@ -73,12 +73,12 @@
             this.lblCand11b = new System.Windows.Forms.Label();
             this.lblCand12a = new System.Windows.Forms.Label();
             this.lblCand12b = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.btnCand07 = new System.Windows.Forms.Button();
+            this.btnCand08 = new System.Windows.Forms.Button();
+            this.btnCand10 = new System.Windows.Forms.Button();
+            this.btnCand09 = new System.Windows.Forms.Button();
+            this.btnCand11 = new System.Windows.Forms.Button();
+            this.btnCand12 = new System.Windows.Forms.Button();
             this.pbxCand13a = new System.Windows.Forms.PictureBox();
             this.pbxCand14a = new System.Windows.Forms.PictureBox();
             this.pbxCand15a = new System.Windows.Forms.PictureBox();
@@ -86,23 +86,23 @@
             this.pbxCand18a = new System.Windows.Forms.PictureBox();
             this.pbxCand17a = new System.Windows.Forms.PictureBox();
             this.lblCand13a = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblCand13b = new System.Windows.Forms.Label();
             this.lblCand14a = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lblCand14b = new System.Windows.Forms.Label();
             this.lblCand15a = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.lblCand15b = new System.Windows.Forms.Label();
             this.lblCand16a = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.lblCand16b = new System.Windows.Forms.Label();
             this.lblCand17a = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
+            this.lblCand17b = new System.Windows.Forms.Label();
             this.lblCand18a = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
+            this.lblCand18b = new System.Windows.Forms.Label();
+            this.btnCand13 = new System.Windows.Forms.Button();
+            this.btnCand14 = new System.Windows.Forms.Button();
+            this.btnCand15 = new System.Windows.Forms.Button();
+            this.btnCand16 = new System.Windows.Forms.Button();
+            this.btnCand17 = new System.Windows.Forms.Button();
+            this.btnCand18 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxNustLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCand01)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCand02)).BeginInit();
@@ -302,14 +302,14 @@
             this.lblCand06b.TabIndex = 26;
             this.lblCand06b.Text = "Cand Name 06";
             // 
-            // button1
+            // btnCand01
             // 
-            this.button1.Location = new System.Drawing.Point(16, 236);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 23);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Vote";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCand01.Location = new System.Drawing.Point(16, 236);
+            this.btnCand01.Name = "btnCand01";
+            this.btnCand01.Size = new System.Drawing.Size(96, 23);
+            this.btnCand01.TabIndex = 27;
+            this.btnCand01.Text = "Vote";
+            this.btnCand01.UseVisualStyleBackColor = true;
             // 
             // btnNext
             // 
@@ -331,50 +331,50 @@
             this.button21.Text = "Next";
             this.button21.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnCand02
             // 
-            this.button2.Location = new System.Drawing.Point(118, 236);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 23);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "Vote";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCand02.Location = new System.Drawing.Point(118, 236);
+            this.btnCand02.Name = "btnCand02";
+            this.btnCand02.Size = new System.Drawing.Size(100, 23);
+            this.btnCand02.TabIndex = 27;
+            this.btnCand02.Text = "Vote";
+            this.btnCand02.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnCand03
             // 
-            this.button3.Location = new System.Drawing.Point(224, 236);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 23);
-            this.button3.TabIndex = 27;
-            this.button3.Text = "Vote";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnCand03.Location = new System.Drawing.Point(224, 236);
+            this.btnCand03.Name = "btnCand03";
+            this.btnCand03.Size = new System.Drawing.Size(100, 23);
+            this.btnCand03.TabIndex = 27;
+            this.btnCand03.Text = "Vote";
+            this.btnCand03.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnCand04
             // 
-            this.button4.Location = new System.Drawing.Point(330, 236);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 23);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "Vote";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnCand04.Location = new System.Drawing.Point(330, 236);
+            this.btnCand04.Name = "btnCand04";
+            this.btnCand04.Size = new System.Drawing.Size(100, 23);
+            this.btnCand04.TabIndex = 27;
+            this.btnCand04.Text = "Vote";
+            this.btnCand04.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnCand05
             // 
-            this.button5.Location = new System.Drawing.Point(436, 236);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 23);
-            this.button5.TabIndex = 27;
-            this.button5.Text = "Vote";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnCand05.Location = new System.Drawing.Point(436, 236);
+            this.btnCand05.Name = "btnCand05";
+            this.btnCand05.Size = new System.Drawing.Size(100, 23);
+            this.btnCand05.TabIndex = 27;
+            this.btnCand05.Text = "Vote";
+            this.btnCand05.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnCand06
             // 
-            this.button6.Location = new System.Drawing.Point(542, 236);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(99, 23);
-            this.button6.TabIndex = 27;
-            this.button6.Text = "Vote";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnCand06.Location = new System.Drawing.Point(542, 236);
+            this.btnCand06.Name = "btnCand06";
+            this.btnCand06.Size = new System.Drawing.Size(99, 23);
+            this.btnCand06.TabIndex = 27;
+            this.btnCand06.Text = "Vote";
+            this.btnCand06.UseVisualStyleBackColor = true;
             // 
             // pbxCand07a
             // 
@@ -544,59 +544,59 @@
             this.lblCand12b.TabIndex = 26;
             this.lblCand12b.Text = "Cand Name 06";
             // 
-            // button7
+            // btnCand07
             // 
-            this.button7.Location = new System.Drawing.Point(16, 403);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(96, 23);
-            this.button7.TabIndex = 27;
-            this.button7.Text = "Vote";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnCand07.Location = new System.Drawing.Point(16, 403);
+            this.btnCand07.Name = "btnCand07";
+            this.btnCand07.Size = new System.Drawing.Size(96, 23);
+            this.btnCand07.TabIndex = 27;
+            this.btnCand07.Text = "Vote";
+            this.btnCand07.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btnCand08
             // 
-            this.button8.Location = new System.Drawing.Point(118, 403);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(100, 23);
-            this.button8.TabIndex = 27;
-            this.button8.Text = "Vote";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnCand08.Location = new System.Drawing.Point(118, 403);
+            this.btnCand08.Name = "btnCand08";
+            this.btnCand08.Size = new System.Drawing.Size(100, 23);
+            this.btnCand08.TabIndex = 27;
+            this.btnCand08.Text = "Vote";
+            this.btnCand08.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btnCand10
             // 
-            this.button9.Location = new System.Drawing.Point(330, 403);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(100, 23);
-            this.button9.TabIndex = 27;
-            this.button9.Text = "Vote";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnCand10.Location = new System.Drawing.Point(330, 403);
+            this.btnCand10.Name = "btnCand10";
+            this.btnCand10.Size = new System.Drawing.Size(100, 23);
+            this.btnCand10.TabIndex = 27;
+            this.btnCand10.Text = "Vote";
+            this.btnCand10.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // btnCand09
             // 
-            this.button10.Location = new System.Drawing.Point(224, 403);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(100, 23);
-            this.button10.TabIndex = 27;
-            this.button10.Text = "Vote";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnCand09.Location = new System.Drawing.Point(224, 403);
+            this.btnCand09.Name = "btnCand09";
+            this.btnCand09.Size = new System.Drawing.Size(100, 23);
+            this.btnCand09.TabIndex = 27;
+            this.btnCand09.Text = "Vote";
+            this.btnCand09.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // btnCand11
             // 
-            this.button11.Location = new System.Drawing.Point(436, 403);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(100, 23);
-            this.button11.TabIndex = 27;
-            this.button11.Text = "Vote";
-            this.button11.UseVisualStyleBackColor = true;
+            this.btnCand11.Location = new System.Drawing.Point(436, 403);
+            this.btnCand11.Name = "btnCand11";
+            this.btnCand11.Size = new System.Drawing.Size(100, 23);
+            this.btnCand11.TabIndex = 27;
+            this.btnCand11.Text = "Vote";
+            this.btnCand11.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // btnCand12
             // 
-            this.button12.Location = new System.Drawing.Point(542, 403);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(99, 23);
-            this.button12.TabIndex = 27;
-            this.button12.Text = "Vote";
-            this.button12.UseVisualStyleBackColor = true;
+            this.btnCand12.Location = new System.Drawing.Point(542, 403);
+            this.btnCand12.Name = "btnCand12";
+            this.btnCand12.Size = new System.Drawing.Size(99, 23);
+            this.btnCand12.TabIndex = 27;
+            this.btnCand12.Text = "Vote";
+            this.btnCand12.UseVisualStyleBackColor = true;
             // 
             // pbxCand13a
             // 
@@ -656,15 +656,15 @@
             this.lblCand13a.TabIndex = 26;
             this.lblCand13a.Text = "Cand Name 01";
             // 
-            // label14
+            // lblCand13b
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(17, 553);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(100, 14);
-            this.label14.TabIndex = 26;
-            this.label14.Text = "Cand Name 01";
+            this.lblCand13b.AutoSize = true;
+            this.lblCand13b.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCand13b.Location = new System.Drawing.Point(17, 553);
+            this.lblCand13b.Name = "lblCand13b";
+            this.lblCand13b.Size = new System.Drawing.Size(100, 14);
+            this.lblCand13b.TabIndex = 26;
+            this.lblCand13b.Text = "Cand Name 01";
             // 
             // lblCand14a
             // 
@@ -676,15 +676,15 @@
             this.lblCand14a.TabIndex = 26;
             this.lblCand14a.Text = "Cand Name 02";
             // 
-            // label16
+            // lblCand14b
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(119, 553);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(100, 14);
-            this.label16.TabIndex = 26;
-            this.label16.Text = "Cand Name 02";
+            this.lblCand14b.AutoSize = true;
+            this.lblCand14b.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCand14b.Location = new System.Drawing.Point(119, 553);
+            this.lblCand14b.Name = "lblCand14b";
+            this.lblCand14b.Size = new System.Drawing.Size(100, 14);
+            this.lblCand14b.TabIndex = 26;
+            this.lblCand14b.Text = "Cand Name 02";
             // 
             // lblCand15a
             // 
@@ -696,15 +696,15 @@
             this.lblCand15a.TabIndex = 26;
             this.lblCand15a.Text = "Cand Name 03";
             // 
-            // label18
+            // lblCand15b
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(225, 553);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(100, 14);
-            this.label18.TabIndex = 26;
-            this.label18.Text = "Cand Name 03";
+            this.lblCand15b.AutoSize = true;
+            this.lblCand15b.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCand15b.Location = new System.Drawing.Point(225, 553);
+            this.lblCand15b.Name = "lblCand15b";
+            this.lblCand15b.Size = new System.Drawing.Size(100, 14);
+            this.lblCand15b.TabIndex = 26;
+            this.lblCand15b.Text = "Cand Name 03";
             // 
             // lblCand16a
             // 
@@ -716,15 +716,15 @@
             this.lblCand16a.TabIndex = 26;
             this.lblCand16a.Text = "Cand Name 04";
             // 
-            // label20
+            // lblCand16b
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(331, 553);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(100, 14);
-            this.label20.TabIndex = 26;
-            this.label20.Text = "Cand Name 04";
+            this.lblCand16b.AutoSize = true;
+            this.lblCand16b.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCand16b.Location = new System.Drawing.Point(331, 553);
+            this.lblCand16b.Name = "lblCand16b";
+            this.lblCand16b.Size = new System.Drawing.Size(100, 14);
+            this.lblCand16b.TabIndex = 26;
+            this.lblCand16b.Text = "Cand Name 04";
             // 
             // lblCand17a
             // 
@@ -736,15 +736,15 @@
             this.lblCand17a.TabIndex = 26;
             this.lblCand17a.Text = "Cand Name 05";
             // 
-            // label22
+            // lblCand17b
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(437, 553);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(100, 14);
-            this.label22.TabIndex = 26;
-            this.label22.Text = "Cand Name 05";
+            this.lblCand17b.AutoSize = true;
+            this.lblCand17b.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCand17b.Location = new System.Drawing.Point(437, 553);
+            this.lblCand17b.Name = "lblCand17b";
+            this.lblCand17b.Size = new System.Drawing.Size(100, 14);
+            this.lblCand17b.TabIndex = 26;
+            this.lblCand17b.Text = "Cand Name 05";
             // 
             // lblCand18a
             // 
@@ -757,69 +757,69 @@
             this.lblCand18a.Text = "Cand Name 06";
             this.lblCand18a.Click += new System.EventHandler(this.label23_Click);
             // 
-            // label24
+            // lblCand18b
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(543, 553);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(100, 14);
-            this.label24.TabIndex = 26;
-            this.label24.Text = "Cand Name 06";
+            this.lblCand18b.AutoSize = true;
+            this.lblCand18b.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCand18b.Location = new System.Drawing.Point(543, 553);
+            this.lblCand18b.Name = "lblCand18b";
+            this.lblCand18b.Size = new System.Drawing.Size(100, 14);
+            this.lblCand18b.TabIndex = 26;
+            this.lblCand18b.Text = "Cand Name 06";
             // 
-            // button13
+            // btnCand13
             // 
-            this.button13.Location = new System.Drawing.Point(20, 570);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(96, 23);
-            this.button13.TabIndex = 27;
-            this.button13.Text = "Vote";
-            this.button13.UseVisualStyleBackColor = true;
+            this.btnCand13.Location = new System.Drawing.Point(20, 570);
+            this.btnCand13.Name = "btnCand13";
+            this.btnCand13.Size = new System.Drawing.Size(96, 23);
+            this.btnCand13.TabIndex = 27;
+            this.btnCand13.Text = "Vote";
+            this.btnCand13.UseVisualStyleBackColor = true;
             // 
-            // button14
+            // btnCand14
             // 
-            this.button14.Location = new System.Drawing.Point(122, 570);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(100, 23);
-            this.button14.TabIndex = 27;
-            this.button14.Text = "Vote";
-            this.button14.UseVisualStyleBackColor = true;
+            this.btnCand14.Location = new System.Drawing.Point(122, 570);
+            this.btnCand14.Name = "btnCand14";
+            this.btnCand14.Size = new System.Drawing.Size(100, 23);
+            this.btnCand14.TabIndex = 27;
+            this.btnCand14.Text = "Vote";
+            this.btnCand14.UseVisualStyleBackColor = true;
             // 
-            // button15
+            // btnCand15
             // 
-            this.button15.Location = new System.Drawing.Point(334, 570);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(100, 23);
-            this.button15.TabIndex = 27;
-            this.button15.Text = "Vote";
-            this.button15.UseVisualStyleBackColor = true;
+            this.btnCand15.Location = new System.Drawing.Point(228, 570);
+            this.btnCand15.Name = "btnCand15";
+            this.btnCand15.Size = new System.Drawing.Size(100, 23);
+            this.btnCand15.TabIndex = 27;
+            this.btnCand15.Text = "Vote";
+            this.btnCand15.UseVisualStyleBackColor = true;
             // 
-            // button16
+            // btnCand16
             // 
-            this.button16.Location = new System.Drawing.Point(228, 570);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(100, 23);
-            this.button16.TabIndex = 27;
-            this.button16.Text = "Vote";
-            this.button16.UseVisualStyleBackColor = true;
+            this.btnCand16.Location = new System.Drawing.Point(334, 570);
+            this.btnCand16.Name = "btnCand16";
+            this.btnCand16.Size = new System.Drawing.Size(100, 23);
+            this.btnCand16.TabIndex = 27;
+            this.btnCand16.Text = "Vote";
+            this.btnCand16.UseVisualStyleBackColor = true;
             // 
-            // button17
+            // btnCand17
             // 
-            this.button17.Location = new System.Drawing.Point(440, 570);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(100, 23);
-            this.button17.TabIndex = 27;
-            this.button17.Text = "Vote";
-            this.button17.UseVisualStyleBackColor = true;
+            this.btnCand17.Location = new System.Drawing.Point(440, 570);
+            this.btnCand17.Name = "btnCand17";
+            this.btnCand17.Size = new System.Drawing.Size(100, 23);
+            this.btnCand17.TabIndex = 27;
+            this.btnCand17.Text = "Vote";
+            this.btnCand17.UseVisualStyleBackColor = true;
             // 
-            // button18
+            // btnCand18
             // 
-            this.button18.Location = new System.Drawing.Point(546, 570);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(99, 23);
-            this.button18.TabIndex = 27;
-            this.button18.Text = "Vote";
-            this.button18.UseVisualStyleBackColor = true;
+            this.btnCand18.Location = new System.Drawing.Point(546, 570);
+            this.btnCand18.Name = "btnCand18";
+            this.btnCand18.Size = new System.Drawing.Size(99, 23);
+            this.btnCand18.TabIndex = 27;
+            this.btnCand18.Text = "Vote";
+            this.btnCand18.UseVisualStyleBackColor = true;
             // 
             // Ballot
             // 
@@ -828,54 +828,54 @@
             this.ClientSize = new System.Drawing.Size(655, 642);
             this.Controls.Add(this.button21);
             this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.button18);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button17);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button16);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button15);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.label24);
+            this.Controls.Add(this.btnCand18);
+            this.Controls.Add(this.btnCand12);
+            this.Controls.Add(this.btnCand06);
+            this.Controls.Add(this.btnCand17);
+            this.Controls.Add(this.btnCand11);
+            this.Controls.Add(this.btnCand05);
+            this.Controls.Add(this.btnCand16);
+            this.Controls.Add(this.btnCand09);
+            this.Controls.Add(this.btnCand03);
+            this.Controls.Add(this.btnCand15);
+            this.Controls.Add(this.btnCand10);
+            this.Controls.Add(this.btnCand04);
+            this.Controls.Add(this.btnCand14);
+            this.Controls.Add(this.btnCand08);
+            this.Controls.Add(this.btnCand02);
+            this.Controls.Add(this.btnCand13);
+            this.Controls.Add(this.btnCand07);
+            this.Controls.Add(this.lblCand18b);
             this.Controls.Add(this.lblCand12b);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCand01);
             this.Controls.Add(this.lblCand18a);
             this.Controls.Add(this.lblCand12a);
             this.Controls.Add(this.lblCand06b);
-            this.Controls.Add(this.label22);
+            this.Controls.Add(this.lblCand17b);
             this.Controls.Add(this.lblCand11b);
             this.Controls.Add(this.lblCand06a);
             this.Controls.Add(this.lblCand17a);
             this.Controls.Add(this.lblCand11a);
             this.Controls.Add(this.lblCand05b);
-            this.Controls.Add(this.label20);
+            this.Controls.Add(this.lblCand16b);
             this.Controls.Add(this.lblCand10b);
             this.Controls.Add(this.lblCand05a);
             this.Controls.Add(this.lblCand16a);
             this.Controls.Add(this.lblCand10a);
             this.Controls.Add(this.lblCand04b);
-            this.Controls.Add(this.label18);
+            this.Controls.Add(this.lblCand15b);
             this.Controls.Add(this.lblCand09b);
             this.Controls.Add(this.lblCand04a);
             this.Controls.Add(this.lblCand15a);
             this.Controls.Add(this.lblCand09a);
             this.Controls.Add(this.lblCand03b);
-            this.Controls.Add(this.label16);
+            this.Controls.Add(this.lblCand14b);
             this.Controls.Add(this.lblCand08b);
             this.Controls.Add(this.lblCand03a);
             this.Controls.Add(this.lblCand14a);
             this.Controls.Add(this.lblCand08a);
             this.Controls.Add(this.lblCand02b);
-            this.Controls.Add(this.label14);
+            this.Controls.Add(this.lblCand13b);
             this.Controls.Add(this.lblCand07b);
             this.Controls.Add(this.lblCand02a);
             this.Controls.Add(this.lblCand13a);
@@ -948,14 +948,14 @@
         private System.Windows.Forms.Label lblCand04b;
         private System.Windows.Forms.Label lblCand05b;
         private System.Windows.Forms.Label lblCand06b;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCand01;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnCand02;
+        private System.Windows.Forms.Button btnCand03;
+        private System.Windows.Forms.Button btnCand04;
+        private System.Windows.Forms.Button btnCand05;
+        private System.Windows.Forms.Button btnCand06;
         private System.Windows.Forms.PictureBox pbxCand07a;
         private System.Windows.Forms.PictureBox pbxCand08a;
         private System.Windows.Forms.PictureBox pbxCand09a;
@@ -974,12 +974,12 @@
         private System.Windows.Forms.Label lblCand11b;
         private System.Windows.Forms.Label lblCand12a;
         private System.Windows.Forms.Label lblCand12b;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button btnCand07;
+        private System.Windows.Forms.Button btnCand08;
+        private System.Windows.Forms.Button btnCand10;
+        private System.Windows.Forms.Button btnCand09;
+        private System.Windows.Forms.Button btnCand11;
+        private System.Windows.Forms.Button btnCand12;
         private System.Windows.Forms.PictureBox pbxCand13a;
         private System.Windows.Forms.PictureBox pbxCand14a;
         private System.Windows.Forms.PictureBox pbxCand15a;
@@ -987,22 +987,22 @@
         private System.Windows.Forms.PictureBox pbxCand18a;
         private System.Windows.Forms.PictureBox pbxCand17a;
         private System.Windows.Forms.Label lblCand13a;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblCand13b;
         private System.Windows.Forms.Label lblCand14a;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblCand14b;
         private System.Windows.Forms.Label lblCand15a;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblCand15b;
         private System.Windows.Forms.Label lblCand16a;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lblCand16b;
         private System.Windows.Forms.Label lblCand17a;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label lblCand17b;
         private System.Windows.Forms.Label lblCand18a;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Label lblCand18b;
+        private System.Windows.Forms.Button btnCand13;
+        private System.Windows.Forms.Button btnCand14;
+        private System.Windows.Forms.Button btnCand15;
+        private System.Windows.Forms.Button btnCand16;
+        private System.Windows.Forms.Button btnCand17;
+        private System.Windows.Forms.Button btnCand18;
     }
 }
