@@ -14,7 +14,7 @@ namespace eVoting_Application
     public partial class ElectionStartup : Form
     {
         public bool openNextForm;
-        public static string electionID = null;
+        //public static string electionID = null;
         public ElectionStartup()
         {
             InitializeComponent();
@@ -71,7 +71,7 @@ namespace eVoting_Application
                     string sStatus = myReader.GetString("status");
                     lblElectionStatus.Text = sStatus;
                     string sElectionID = myReader.GetInt32("electionID").ToString();
-                    electionID = sElectionID;                    
+                    lblElectionID.Text = sElectionID;                    
                 }
             }
             catch (Exception ex)
@@ -85,8 +85,9 @@ namespace eVoting_Application
             if (lblElectionStatus.Text == "Incomplete")
             {
                 openNextForm = true;
-                Add_Candidates ad = new Add_Candidates();
-                ad.ShowDialog();
+                int electionID = Convert.ToInt32(lblElectionID.Text);
+                Add_Candidates ad = new Add_Candidates(electionID);
+                ad.Show();
                 this.Hide();
             }
             else if (lblElectionStatus.Text == "Complete")

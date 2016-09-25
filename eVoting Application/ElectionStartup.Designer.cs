@@ -34,6 +34,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbxLoadElection = new System.Windows.Forms.ComboBox();
             this.lblElectionStatus = new System.Windows.Forms.Label();
+            this.lblElectionID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,12 +86,22 @@
             this.lblElectionStatus.TabIndex = 8;
             this.lblElectionStatus.Text = "Complete or Incomplete";
             // 
+            // lblElectionID
+            // 
+            this.lblElectionID.AutoSize = true;
+            this.lblElectionID.Location = new System.Drawing.Point(12, 220);
+            this.lblElectionID.Name = "lblElectionID";
+            this.lblElectionID.Size = new System.Drawing.Size(118, 13);
+            this.lblElectionID.TabIndex = 8;
+            this.lblElectionID.Text = "Complete or Incomplete";
+            // 
             // ElectionStartup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(484, 261);
+            this.Controls.Add(this.lblElectionID);
             this.Controls.Add(this.lblElectionStatus);
             this.Controls.Add(this.cbxLoadElection);
             this.Controls.Add(this.pictureBox1);
@@ -115,5 +126,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cbxLoadElection;
         private System.Windows.Forms.Label lblElectionStatus;
+        private System.Windows.Forms.Label lblElectionID;
     }
 }
