@@ -113,6 +113,14 @@ namespace eVoting_Application
                         DialogResult result = MessageBox.Show("Candidate Added", "Candidate", MessageBoxButtons.OK);
                         if (result == DialogResult.OK)
                         {
+                            if (Convert.ToInt32(lblX.Text) == Convert.ToInt32(lblY.Text))
+                            {
+                                string id = lblElecID.Text;
+                                VoterLogin vl = new VoterLogin(id);
+                                vl.ShowDialog();
+                                this.Hide();
+                            }
+                            
                             electID = lblElecID.Text;
                             imageLoaded = false;
                             this.Controls.Clear();

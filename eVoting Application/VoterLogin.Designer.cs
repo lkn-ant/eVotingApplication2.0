@@ -33,6 +33,7 @@
             this.lblStudentNum = new System.Windows.Forms.Label();
             this.btnNext = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblElecID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,6 +74,16 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // lblElecID
+            // 
+            this.lblElecID.AutoSize = true;
+            this.lblElecID.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblElecID.Location = new System.Drawing.Point(412, 95);
+            this.lblElecID.Name = "lblElecID";
+            this.lblElecID.Size = new System.Drawing.Size(60, 18);
+            this.lblElecID.TabIndex = 8;
+            this.lblElecID.Text = "ElecID";
+            // 
             // VoterLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -81,6 +92,7 @@
             this.ClientSize = new System.Drawing.Size(484, 261);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.tbxStudentNum);
+            this.Controls.Add(this.lblElecID);
             this.Controls.Add(this.lblStudentNum);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -99,5 +111,6 @@
         private System.Windows.Forms.TextBox tbxStudentNum;
         private System.Windows.Forms.Label lblStudentNum;
         private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Label lblElecID;
     }
 }

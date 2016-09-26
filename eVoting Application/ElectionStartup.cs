@@ -93,7 +93,8 @@ namespace eVoting_Application
             else if (lblElectionStatus.Text == "Complete")
             {
                 openNextForm = true;
-                VoterLogin vl = new VoterLogin();
+                string eid = lblElectionID.Text;
+                VoterLogin vl = new VoterLogin(eid);
                 vl.ShowDialog();
                 this.Hide();
             }

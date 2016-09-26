@@ -314,6 +314,7 @@
             this.lblElecID.Size = new System.Drawing.Size(60, 18);
             this.lblElecID.TabIndex = 1;
             this.lblElecID.Text = "ElecID";
+            this.lblElecID.Visible = false;
             // 
             // tbxImagePath
             // 
@@ -321,6 +322,7 @@
             this.tbxImagePath.Name = "tbxImagePath";
             this.tbxImagePath.Size = new System.Drawing.Size(164, 20);
             this.tbxImagePath.TabIndex = 10;
+            this.tbxImagePath.Visible = false;
             // 
             // Add_Candidates
             // 

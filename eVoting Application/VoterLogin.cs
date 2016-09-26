@@ -7,14 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace eVoting_Application
 {
     public partial class VoterLogin : Form
     {
-        public VoterLogin()
+        public VoterLogin(string id)
         {
             InitializeComponent();
+            lblElecID.Text = id;
         }
     }
 }
