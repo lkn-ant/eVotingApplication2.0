@@ -15,7 +15,8 @@ namespace eVoting_Application
 {
     public partial class Add_Candidates : Form
     {
-        //public static int electID;
+        public static string electID;
+        public static bool imageLoaded = false;
         public Add_Candidates(int electionID)
         {
             InitializeComponent();
@@ -80,41 +81,59 @@ namespace eVoting_Application
 
         private void btnSaveCandidate_Click(object sender, EventArgs e)
         {
-            byte[] imageBT = null;
-            FileStream fStream = new FileStream(this.tbxImagePath.Text, FileMode.Open, FileAccess.Read);
-            BinaryReader bReader = new BinaryReader(fStream);
-            imageBT = bReader.ReadBytes((int)fStream.Length);
-
-            string myConnection = "datasource=localhost;port=3306;username=root;password=root";
-            string Query = "insert into evotingapplication.candidate (studentNum, initials, lastName, faculty, age, gender, yearOfStudy, electionID, image)"+
-                "values ('"+tbxStudentNum.Text+"', '"+tbxInitials.Text+"', '"+tbxLastName.Text+"', '"+cbxFaculty.Text+"', '"+tbxAge.Text+"', '"+cbxGender.Text+"', '"+cbxYearOfStudy.Text+"', '"+lblElecID.Text+"', @IMG); ";
-            MySqlConnection condb = new MySqlConnection(myConnection);
-            MySqlCommand cmddb = new MySqlCommand(Query, condb);
-            MySqlDataReader myReader;
-            try
+            if (imageLoaded == false)
             {
-                
-                if (Convert.ToInt32(tbxAge.Text) < 18 || Convert.ToInt32(tbxAge.Text) > 100)
-                {
-                    MessageBox.Show("Please enter an age between 18 and 100");
-                }
-                else
-                {
-                    condb.Open();
-                    cmddb.Parameters.Add(new MySqlParameter("@IMG", imageBT));
-                    myReader = cmddb.ExecuteReader();
-                    MessageBox.Show("Candidate Added");
-                    while (myReader.Read())
-                    {
+                MessageBox.Show("Please upload an image!", "Upload Image",MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                byte[] imageBT = null;
+                FileStream fStream = new FileStream(this.tbxImagePath.Text, FileMode.Open, FileAccess.Read);
+                BinaryReader bReader = new BinaryReader(fStream);
+                imageBT = bReader.ReadBytes((int)fStream.Length);
 
+                string myConnection = "datasource=localhost;port=3306;username=root;password=root";
+                string Query = "insert into evotingapplication.candidate (studentNum, initials, lastName, faculty, age, gender, yearOfStudy, electionID, image)" +
+                    "values ('" + tbxStudentNum.Text + "', '" + tbxInitials.Text + "', '" + tbxLastName.Text + "', '" + cbxFaculty.Text + "', '" + tbxAge.Text + "', '" + cbxGender.Text + "', '" + cbxYearOfStudy.Text + "', '" + lblElecID.Text + "', @IMG); ";
+                MySqlConnection condb = new MySqlConnection(myConnection);
+                MySqlCommand cmddb = new MySqlCommand(Query, condb);
+                MySqlDataReader myReader;
+                try
+                {
+
+                    if (Convert.ToInt32(tbxAge.Text) < 18 || Convert.ToInt32(tbxAge.Text) > 100)
+                    {
+                        MessageBox.Show("Please enter an age between 18 and 100");
+                    }
+                    else
+                    {
+                        condb.Open();
+                        cmddb.Parameters.Add(new MySqlParameter("@IMG", imageBT));
+                        myReader = cmddb.ExecuteReader();
+                        DialogResult result = MessageBox.Show("Candidate Added", "Candidate", MessageBoxButtons.OK);
+                        if (result == DialogResult.OK)
+                        {
+                            electID = lblElecID.Text;
+                            imageLoaded = false;
+                            this.Controls.Clear();
+                            this.InitializeComponent();
+                            lblElecID.Text = electID;
+                            ElecYearLabel();
+                            CandCountLabel();
+
+                        }
+
+
+                        while (myReader.Read())
+                        {
+
+                        }
                     }
                 }
-
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
@@ -128,6 +147,7 @@ namespace eVoting_Application
                 string picLoc = dlg.FileName.ToString();
                 tbxImagePath.Text = picLoc;
                 pbxCandidatePhoto.ImageLocation = picLoc;
+                imageLoaded = true;
             }
         }
     }
