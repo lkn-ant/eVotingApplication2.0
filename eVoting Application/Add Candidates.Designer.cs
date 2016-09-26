@@ -54,6 +54,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbxFaculty = new System.Windows.Forms.ComboBox();
             this.lblElecID = new System.Windows.Forms.Label();
+            this.tbxImagePath = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCandidatePhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -70,18 +71,19 @@
             // 
             // btnUploadImage
             // 
-            this.btnUploadImage.Location = new System.Drawing.Point(12, 234);
+            this.btnUploadImage.Location = new System.Drawing.Point(12, 259);
             this.btnUploadImage.Name = "btnUploadImage";
             this.btnUploadImage.Size = new System.Drawing.Size(101, 55);
             this.btnUploadImage.TabIndex = 3;
             this.btnUploadImage.Text = "Upload Image";
             this.btnUploadImage.UseVisualStyleBackColor = true;
+            this.btnUploadImage.Click += new System.EventHandler(this.btnUploadImage_Click);
             // 
             // lblStudentNum
             // 
             this.lblStudentNum.AutoSize = true;
             this.lblStudentNum.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStudentNum.Location = new System.Drawing.Point(119, 131);
+            this.lblStudentNum.Location = new System.Drawing.Point(119, 156);
             this.lblStudentNum.Name = "lblStudentNum";
             this.lblStudentNum.Size = new System.Drawing.Size(141, 18);
             this.lblStudentNum.TabIndex = 4;
@@ -91,7 +93,7 @@
             // 
             this.lblInitials.AutoSize = true;
             this.lblInitials.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInitials.Location = new System.Drawing.Point(119, 164);
+            this.lblInitials.Location = new System.Drawing.Point(119, 189);
             this.lblInitials.Name = "lblInitials";
             this.lblInitials.Size = new System.Drawing.Size(66, 18);
             this.lblInitials.TabIndex = 4;
@@ -101,7 +103,7 @@
             // 
             this.lblLastName.AutoSize = true;
             this.lblLastName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.Location = new System.Drawing.Point(119, 197);
+            this.lblLastName.Location = new System.Drawing.Point(119, 222);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(96, 18);
             this.lblLastName.TabIndex = 4;
@@ -111,7 +113,7 @@
             // 
             this.lblFaculty.AutoSize = true;
             this.lblFaculty.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFaculty.Location = new System.Drawing.Point(119, 230);
+            this.lblFaculty.Location = new System.Drawing.Point(119, 255);
             this.lblFaculty.Name = "lblFaculty";
             this.lblFaculty.Size = new System.Drawing.Size(65, 18);
             this.lblFaculty.TabIndex = 4;
@@ -121,7 +123,7 @@
             // 
             this.lblAge.AutoSize = true;
             this.lblAge.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAge.Location = new System.Drawing.Point(119, 263);
+            this.lblAge.Location = new System.Drawing.Point(119, 288);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(39, 18);
             this.lblAge.TabIndex = 4;
@@ -131,7 +133,7 @@
             // 
             this.lblGender.AutoSize = true;
             this.lblGender.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.Location = new System.Drawing.Point(119, 296);
+            this.lblGender.Location = new System.Drawing.Point(119, 321);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(66, 18);
             this.lblGender.TabIndex = 4;
@@ -141,7 +143,7 @@
             // 
             this.lblYearOfStudy.AutoSize = true;
             this.lblYearOfStudy.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYearOfStudy.Location = new System.Drawing.Point(119, 328);
+            this.lblYearOfStudy.Location = new System.Drawing.Point(119, 353);
             this.lblYearOfStudy.Name = "lblYearOfStudy";
             this.lblYearOfStudy.Size = new System.Drawing.Size(121, 18);
             this.lblYearOfStudy.TabIndex = 4;
@@ -150,7 +152,7 @@
             // tbxStudentNum
             // 
             this.tbxStudentNum.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxStudentNum.Location = new System.Drawing.Point(266, 128);
+            this.tbxStudentNum.Location = new System.Drawing.Point(266, 153);
             this.tbxStudentNum.Name = "tbxStudentNum";
             this.tbxStudentNum.Size = new System.Drawing.Size(207, 27);
             this.tbxStudentNum.TabIndex = 1;
@@ -158,7 +160,7 @@
             // tbxInitials
             // 
             this.tbxInitials.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxInitials.Location = new System.Drawing.Point(266, 161);
+            this.tbxInitials.Location = new System.Drawing.Point(266, 186);
             this.tbxInitials.Name = "tbxInitials";
             this.tbxInitials.Size = new System.Drawing.Size(207, 27);
             this.tbxInitials.TabIndex = 2;
@@ -166,7 +168,7 @@
             // tbxLastName
             // 
             this.tbxLastName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxLastName.Location = new System.Drawing.Point(266, 194);
+            this.tbxLastName.Location = new System.Drawing.Point(266, 219);
             this.tbxLastName.Name = "tbxLastName";
             this.tbxLastName.Size = new System.Drawing.Size(207, 27);
             this.tbxLastName.TabIndex = 3;
@@ -174,7 +176,7 @@
             // tbxAge
             // 
             this.tbxAge.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxAge.Location = new System.Drawing.Point(266, 260);
+            this.tbxAge.Location = new System.Drawing.Point(266, 285);
             this.tbxAge.Name = "tbxAge";
             this.tbxAge.Size = new System.Drawing.Size(207, 27);
             this.tbxAge.TabIndex = 5;
@@ -187,7 +189,7 @@
             "Male",
             "Female",
             "Other"});
-            this.cbxGender.Location = new System.Drawing.Point(266, 293);
+            this.cbxGender.Location = new System.Drawing.Point(266, 318);
             this.cbxGender.Name = "cbxGender";
             this.cbxGender.Size = new System.Drawing.Size(206, 26);
             this.cbxGender.TabIndex = 6;
@@ -204,7 +206,7 @@
             "5th Year",
             "Postgraduate",
             "Other"});
-            this.cbxYearOfStudy.Location = new System.Drawing.Point(266, 325);
+            this.cbxYearOfStudy.Location = new System.Drawing.Point(266, 350);
             this.cbxYearOfStudy.Name = "cbxYearOfStudy";
             this.cbxYearOfStudy.Size = new System.Drawing.Size(207, 26);
             this.cbxYearOfStudy.TabIndex = 7;
@@ -270,9 +272,10 @@
             // 
             // pbxCandidatePhoto
             // 
-            this.pbxCandidatePhoto.Location = new System.Drawing.Point(12, 128);
+            this.pbxCandidatePhoto.Location = new System.Drawing.Point(13, 153);
             this.pbxCandidatePhoto.Name = "pbxCandidatePhoto";
             this.pbxCandidatePhoto.Size = new System.Drawing.Size(100, 100);
+            this.pbxCandidatePhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxCandidatePhoto.TabIndex = 2;
             this.pbxCandidatePhoto.TabStop = false;
             // 
@@ -297,7 +300,7 @@
             "Human Sciences",
             "Management Sciences",
             "Natural Resources and Spatial Sciences"});
-            this.cbxFaculty.Location = new System.Drawing.Point(266, 227);
+            this.cbxFaculty.Location = new System.Drawing.Point(266, 252);
             this.cbxFaculty.Name = "cbxFaculty";
             this.cbxFaculty.Size = new System.Drawing.Size(207, 26);
             this.cbxFaculty.TabIndex = 4;
@@ -312,12 +315,20 @@
             this.lblElecID.TabIndex = 1;
             this.lblElecID.Text = "ElecID";
             // 
+            // tbxImagePath
+            // 
+            this.tbxImagePath.Location = new System.Drawing.Point(13, 127);
+            this.tbxImagePath.Name = "tbxImagePath";
+            this.tbxImagePath.Size = new System.Drawing.Size(164, 20);
+            this.tbxImagePath.TabIndex = 10;
+            // 
             // Add_Candidates
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.tbxImagePath);
             this.Controls.Add(this.cbxYearOfStudy);
             this.Controls.Add(this.cbxFaculty);
             this.Controls.Add(this.cbxGender);
@@ -381,5 +392,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox cbxFaculty;
         private System.Windows.Forms.Label lblElecID;
+        private System.Windows.Forms.TextBox tbxImagePath;
     }
 }

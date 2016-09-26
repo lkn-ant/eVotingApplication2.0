@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using MySql.Data.MySqlClient;
+
 
 namespace eVoting_Application
 {
@@ -78,20 +80,28 @@ namespace eVoting_Application
 
         private void btnSaveCandidate_Click(object sender, EventArgs e)
         {
+            byte[] imageBT = null;
+            FileStream fStream = new FileStream(this.tbxImagePath.Text, FileMode.Open, FileAccess.Read);
+            BinaryReader bReader = new BinaryReader(fStream);
+            imageBT = bReader.ReadBytes((int)fStream.Length);
+
             string myConnection = "datasource=localhost;port=3306;username=root;password=root";
-            string Query = "insert into evotingapplication.candidate (studentNum, initials, lastName, faculty, age, gender, yearOfStudy, electionID) values ('"+tbxStudentNum.Text+"', '"+tbxInitials.Text+"', '"+tbxLastName.Text+"', '"+cbxFaculty.Text+"', '"+tbxAge.Text+"', '"+cbxGender.Text+"', '"+cbxYearOfStudy.Text+"', '"+lblElecID.Text+"'); ";
+            string Query = "insert into evotingapplication.candidate (studentNum, initials, lastName, faculty, age, gender, yearOfStudy, electionID, image)"+
+                "values ('"+tbxStudentNum.Text+"', '"+tbxInitials.Text+"', '"+tbxLastName.Text+"', '"+cbxFaculty.Text+"', '"+tbxAge.Text+"', '"+cbxGender.Text+"', '"+cbxYearOfStudy.Text+"', '"+lblElecID.Text+"', @IMG); ";
             MySqlConnection condb = new MySqlConnection(myConnection);
             MySqlCommand cmddb = new MySqlCommand(Query, condb);
             MySqlDataReader myReader;
             try
             {
-                condb.Open();
+                
                 if (Convert.ToInt32(tbxAge.Text) < 18 || Convert.ToInt32(tbxAge.Text) > 100)
                 {
                     MessageBox.Show("Please enter an age between 18 and 100");
                 }
                 else
                 {
+                    condb.Open();
+                    cmddb.Parameters.Add(new MySqlParameter("@IMG", imageBT));
                     myReader = cmddb.ExecuteReader();
                     MessageBox.Show("Candidate Added");
                     while (myReader.Read())
@@ -105,6 +115,19 @@ namespace eVoting_Application
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnUploadImage_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|All Files(*.*)|*.*";
+            dlg.Title = "Select Candidate Photo (300x300px).";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                string picLoc = dlg.FileName.ToString();
+                tbxImagePath.Text = picLoc;
+                pbxCandidatePhoto.ImageLocation = picLoc;
             }
         }
     }
