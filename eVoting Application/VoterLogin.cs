@@ -17,6 +17,60 @@ namespace eVoting_Application
         {
             InitializeComponent();
             lblElecID.Text = id;
+            LoadElectionStatus();
+            if (lblStatus.Text == "Incomplete")
+            {
+                ChangeElectionStatus();
+                LoadElectionStatus();
+
+            }
+            
+        }
+
+        private void ChangeElectionStatus()
+        {
+            string myConnection = "datasource=localhost;port=3306;username=root;password=root";
+            string Query = "update evotingapplication.election set status='Complete' where electionID='" + lblElecID.Text + "'; ";
+            MySqlConnection condb = new MySqlConnection(myConnection);
+            MySqlCommand cmddb = new MySqlCommand(Query, condb);
+            MySqlDataReader myReader;
+            try
+            {
+                condb.Open();
+                myReader = cmddb.ExecuteReader();
+                while (myReader.Read())
+                {
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void LoadElectionStatus()
+        {
+            string myConnection = "datasource=localhost;port=3306;username=root;password=root";
+            string Query = "select * from evotingapplication.election where electionID='" + lblElecID.Text + "' ; ";
+            MySqlConnection condb = new MySqlConnection(myConnection);
+            MySqlCommand cmddb = new MySqlCommand(Query, condb);
+            MySqlDataReader myReader;
+            try
+            {
+                condb.Open();
+                myReader = cmddb.ExecuteReader();
+
+                while (myReader.Read())
+                {
+                    string sStatus = myReader.GetString("status");
+                    lblStatus.Text = sStatus;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
