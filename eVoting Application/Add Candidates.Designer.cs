@@ -52,7 +52,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.pbxCandidatePhoto = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxFaculty = new System.Windows.Forms.ComboBox();
             this.lblElecID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCandidatePhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -153,7 +153,7 @@
             this.tbxStudentNum.Location = new System.Drawing.Point(266, 128);
             this.tbxStudentNum.Name = "tbxStudentNum";
             this.tbxStudentNum.Size = new System.Drawing.Size(207, 27);
-            this.tbxStudentNum.TabIndex = 5;
+            this.tbxStudentNum.TabIndex = 1;
             // 
             // tbxInitials
             // 
@@ -161,7 +161,7 @@
             this.tbxInitials.Location = new System.Drawing.Point(266, 161);
             this.tbxInitials.Name = "tbxInitials";
             this.tbxInitials.Size = new System.Drawing.Size(207, 27);
-            this.tbxInitials.TabIndex = 5;
+            this.tbxInitials.TabIndex = 2;
             // 
             // tbxLastName
             // 
@@ -169,7 +169,7 @@
             this.tbxLastName.Location = new System.Drawing.Point(266, 194);
             this.tbxLastName.Name = "tbxLastName";
             this.tbxLastName.Size = new System.Drawing.Size(207, 27);
-            this.tbxLastName.TabIndex = 5;
+            this.tbxLastName.TabIndex = 3;
             // 
             // tbxAge
             // 
@@ -207,16 +207,17 @@
             this.cbxYearOfStudy.Location = new System.Drawing.Point(266, 325);
             this.cbxYearOfStudy.Name = "cbxYearOfStudy";
             this.cbxYearOfStudy.Size = new System.Drawing.Size(207, 26);
-            this.cbxYearOfStudy.TabIndex = 6;
+            this.cbxYearOfStudy.TabIndex = 7;
             // 
             // btnSaveCandidate
             // 
             this.btnSaveCandidate.Location = new System.Drawing.Point(322, 394);
             this.btnSaveCandidate.Name = "btnSaveCandidate";
             this.btnSaveCandidate.Size = new System.Drawing.Size(150, 55);
-            this.btnSaveCandidate.TabIndex = 3;
+            this.btnSaveCandidate.TabIndex = 8;
             this.btnSaveCandidate.Text = "Save Candidate";
             this.btnSaveCandidate.UseVisualStyleBackColor = true;
+            this.btnSaveCandidate.Click += new System.EventHandler(this.btnSaveCandidate_Click);
             // 
             // lblCandidate
             // 
@@ -263,7 +264,7 @@
             this.button2.Location = new System.Drawing.Point(166, 394);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(150, 55);
-            this.button2.TabIndex = 3;
+            this.button2.TabIndex = 9;
             this.button2.Text = "View Candidates";
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -285,21 +286,21 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // comboBox1
+            // cbxFaculty
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbxFaculty.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxFaculty.FormattingEnabled = true;
+            this.cbxFaculty.Items.AddRange(new object[] {
             "Computing and Informatics",
             "Engineering",
             "Health and Applied Sciences",
             "Human Sciences",
             "Management Sciences",
             "Natural Resources and Spatial Sciences"});
-            this.comboBox1.Location = new System.Drawing.Point(266, 227);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(207, 26);
-            this.comboBox1.TabIndex = 6;
+            this.cbxFaculty.Location = new System.Drawing.Point(266, 227);
+            this.cbxFaculty.Name = "cbxFaculty";
+            this.cbxFaculty.Size = new System.Drawing.Size(207, 26);
+            this.cbxFaculty.TabIndex = 4;
             // 
             // lblElecID
             // 
@@ -318,7 +319,7 @@
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(484, 461);
             this.Controls.Add(this.cbxYearOfStudy);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbxFaculty);
             this.Controls.Add(this.cbxGender);
             this.Controls.Add(this.tbxAge);
             this.Controls.Add(this.tbxLastName);
@@ -378,7 +379,7 @@
         private System.Windows.Forms.Label lblOf;
         private System.Windows.Forms.Label lblY;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxFaculty;
         private System.Windows.Forms.Label lblElecID;
     }
 }
