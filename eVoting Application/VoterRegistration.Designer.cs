@@ -43,6 +43,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnNewElection = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
+            this.lblElecID = new System.Windows.Forms.Label();
+            this.lblStudentNum = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -196,6 +198,26 @@
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
             // 
+            // lblElecID
+            // 
+            this.lblElecID.AutoSize = true;
+            this.lblElecID.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblElecID.Location = new System.Drawing.Point(12, 95);
+            this.lblElecID.Name = "lblElecID";
+            this.lblElecID.Size = new System.Drawing.Size(60, 18);
+            this.lblElecID.TabIndex = 12;
+            this.lblElecID.Text = "ElecID";
+            // 
+            // lblStudentNum
+            // 
+            this.lblStudentNum.AutoSize = true;
+            this.lblStudentNum.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStudentNum.Location = new System.Drawing.Point(363, 95);
+            this.lblStudentNum.Name = "lblStudentNum";
+            this.lblStudentNum.Size = new System.Drawing.Size(109, 18);
+            this.lblStudentNum.TabIndex = 12;
+            this.lblStudentNum.Text = "StudentNum";
+            // 
             // VoterRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,6 +237,8 @@
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.lblFaculty);
             this.Controls.Add(this.lblLastName);
+            this.Controls.Add(this.lblStudentNum);
+            this.Controls.Add(this.lblElecID);
             this.Controls.Add(this.lblInitials);
             this.Name = "VoterRegistration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -242,5 +266,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnNewElection;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Label lblElecID;
+        private System.Windows.Forms.Label lblStudentNum;
     }
 }

@@ -12,9 +12,11 @@ namespace eVoting_Application
 {
     public partial class VoterRegistration : Form
     {
-        public VoterRegistration()
+        public VoterRegistration(string studentNum, string electionID)
         {
             InitializeComponent();
+            lblElecID.Text = electionID;
+            lblStudentNum.Text = studentNum;
         }
     }
 }
