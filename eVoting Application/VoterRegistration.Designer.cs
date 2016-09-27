@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VoterRegistration));
             this.cbxYearOfStudy = new System.Windows.Forms.ComboBox();
             this.cbxGender = new System.Windows.Forms.ComboBox();
             this.tbxAge = new System.Windows.Forms.TextBox();
-            this.tbxFaculty = new System.Windows.Forms.TextBox();
             this.tbxLastName = new System.Windows.Forms.TextBox();
             this.tbxInitials = new System.Windows.Forms.TextBox();
             this.lblYearOfStudy = new System.Windows.Forms.Label();
@@ -45,6 +45,7 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.lblElecID = new System.Windows.Forms.Label();
             this.lblStudentNum = new System.Windows.Forms.Label();
+            this.cbxFaculty = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,10 +61,10 @@
             "5th Year",
             "Postgraduate",
             "Other"});
-            this.cbxYearOfStudy.Location = new System.Drawing.Point(324, 299);
+            this.cbxYearOfStudy.Location = new System.Drawing.Point(166, 299);
             this.cbxYearOfStudy.Name = "cbxYearOfStudy";
-            this.cbxYearOfStudy.Size = new System.Drawing.Size(149, 26);
-            this.cbxYearOfStudy.TabIndex = 17;
+            this.cbxYearOfStudy.Size = new System.Drawing.Size(307, 26);
+            this.cbxYearOfStudy.TabIndex = 6;
             // 
             // cbxGender
             // 
@@ -73,42 +74,37 @@
             "Male",
             "Female",
             "Other"});
-            this.cbxGender.Location = new System.Drawing.Point(323, 267);
+            this.cbxGender.Location = new System.Drawing.Point(166, 267);
             this.cbxGender.Name = "cbxGender";
-            this.cbxGender.Size = new System.Drawing.Size(149, 26);
-            this.cbxGender.TabIndex = 18;
+            this.cbxGender.Size = new System.Drawing.Size(306, 26);
+            this.cbxGender.TabIndex = 5;
             // 
             // tbxAge
             // 
             this.tbxAge.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxAge.Location = new System.Drawing.Point(323, 234);
+            this.tbxAge.Location = new System.Drawing.Point(166, 234);
+            this.tbxAge.MaxLength = 2;
             this.tbxAge.Name = "tbxAge";
-            this.tbxAge.Size = new System.Drawing.Size(150, 27);
-            this.tbxAge.TabIndex = 13;
-            // 
-            // tbxFaculty
-            // 
-            this.tbxFaculty.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxFaculty.Location = new System.Drawing.Point(323, 201);
-            this.tbxFaculty.Name = "tbxFaculty";
-            this.tbxFaculty.Size = new System.Drawing.Size(150, 27);
-            this.tbxFaculty.TabIndex = 14;
+            this.tbxAge.Size = new System.Drawing.Size(307, 27);
+            this.tbxAge.TabIndex = 4;
             // 
             // tbxLastName
             // 
             this.tbxLastName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxLastName.Location = new System.Drawing.Point(323, 168);
+            this.tbxLastName.Location = new System.Drawing.Point(166, 168);
+            this.tbxLastName.MaxLength = 45;
             this.tbxLastName.Name = "tbxLastName";
-            this.tbxLastName.Size = new System.Drawing.Size(150, 27);
-            this.tbxLastName.TabIndex = 15;
+            this.tbxLastName.Size = new System.Drawing.Size(307, 27);
+            this.tbxLastName.TabIndex = 2;
             // 
             // tbxInitials
             // 
             this.tbxInitials.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxInitials.Location = new System.Drawing.Point(323, 135);
+            this.tbxInitials.Location = new System.Drawing.Point(166, 135);
+            this.tbxInitials.MaxLength = 5;
             this.tbxInitials.Name = "tbxInitials";
-            this.tbxInitials.Size = new System.Drawing.Size(150, 27);
-            this.tbxInitials.TabIndex = 16;
+            this.tbxInitials.Size = new System.Drawing.Size(307, 27);
+            this.tbxInitials.TabIndex = 1;
             // 
             // lblYearOfStudy
             // 
@@ -185,18 +181,20 @@
             this.btnNewElection.Location = new System.Drawing.Point(322, 394);
             this.btnNewElection.Name = "btnNewElection";
             this.btnNewElection.Size = new System.Drawing.Size(150, 55);
-            this.btnNewElection.TabIndex = 20;
+            this.btnNewElection.TabIndex = 8;
             this.btnNewElection.Text = "Next";
             this.btnNewElection.UseVisualStyleBackColor = true;
+            this.btnNewElection.Click += new System.EventHandler(this.btnNewElection_Click);
             // 
             // btnReset
             // 
             this.btnReset.Location = new System.Drawing.Point(166, 394);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(150, 55);
-            this.btnReset.TabIndex = 21;
+            this.btnReset.TabIndex = 7;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // lblElecID
             // 
@@ -218,18 +216,35 @@
             this.lblStudentNum.TabIndex = 12;
             this.lblStudentNum.Text = "StudentNum";
             // 
+            // cbxFaculty
+            // 
+            this.cbxFaculty.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxFaculty.FormattingEnabled = true;
+            this.cbxFaculty.Items.AddRange(new object[] {
+            "Computing and Informatics",
+            "Engineering",
+            "Health and Applied Sciences",
+            "Human Sciences",
+            "Management Sciences",
+            "Natural Resources and Spatial Sciences"});
+            this.cbxFaculty.Location = new System.Drawing.Point(166, 202);
+            this.cbxFaculty.Name = "cbxFaculty";
+            this.cbxFaculty.Size = new System.Drawing.Size(306, 26);
+            this.cbxFaculty.TabIndex = 3;
+            // 
             // VoterRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.cbxFaculty);
             this.Controls.Add(this.btnNewElection);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cbxYearOfStudy);
             this.Controls.Add(this.cbxGender);
             this.Controls.Add(this.tbxAge);
-            this.Controls.Add(this.tbxFaculty);
             this.Controls.Add(this.tbxLastName);
             this.Controls.Add(this.tbxInitials);
             this.Controls.Add(this.lblYearOfStudy);
@@ -240,6 +255,7 @@
             this.Controls.Add(this.lblStudentNum);
             this.Controls.Add(this.lblElecID);
             this.Controls.Add(this.lblInitials);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VoterRegistration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VoterRegistration";
@@ -254,7 +270,6 @@
         private System.Windows.Forms.ComboBox cbxYearOfStudy;
         private System.Windows.Forms.ComboBox cbxGender;
         private System.Windows.Forms.TextBox tbxAge;
-        private System.Windows.Forms.TextBox tbxFaculty;
         private System.Windows.Forms.TextBox tbxLastName;
         private System.Windows.Forms.TextBox tbxInitials;
         private System.Windows.Forms.Label lblYearOfStudy;
@@ -268,5 +283,6 @@
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Label lblElecID;
         private System.Windows.Forms.Label lblStudentNum;
+        private System.Windows.Forms.ComboBox cbxFaculty;
     }
 }
