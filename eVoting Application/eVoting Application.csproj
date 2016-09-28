@@ -75,18 +75,6 @@
     <Compile Include="Ballot.Designer.cs">
       <DependentUpon>Ballot.cs</DependentUpon>
     </Compile>
-    <Compile Include="BallotComboBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BallotComboBox.Designer.cs">
-      <DependentUpon>BallotComboBox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CandidateInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CandidateInfo.Designer.cs">
-      <DependentUpon>CandidateInfo.cs</DependentUpon>
-    </Compile>
     <Compile Include="ElectionSetup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,12 +106,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ballot.resx">
       <DependentUpon>Ballot.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BallotComboBox.resx">
-      <DependentUpon>BallotComboBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CandidateInfo.resx">
-      <DependentUpon>CandidateInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ElectionSetup.resx">
       <DependentUpon>ElectionSetup.cs</DependentUpon>

@@ -38,6 +38,12 @@
             this.tbxAge = new System.Windows.Forms.TextBox();
             this.tbxInitials = new System.Windows.Forms.TextBox();
             this.tbxSelection = new System.Windows.Forms.TextBox();
+            this.tbxStudentNum = new System.Windows.Forms.TextBox();
+            this.tbxStudentFaculty = new System.Windows.Forms.TextBox();
+            this.tbxStudentGender = new System.Windows.Forms.TextBox();
+            this.tbxElecId = new System.Windows.Forms.TextBox();
+            this.tbxStudentYearOfStudy = new System.Windows.Forms.TextBox();
+            this.tbxStudentAge = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxNustLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +67,7 @@
             this.btnVote.TabIndex = 70;
             this.btnVote.Text = "Vote";
             this.btnVote.UseVisualStyleBackColor = true;
+            this.btnVote.Click += new System.EventHandler(this.btnVote_Click);
             // 
             // btnLoadBallot
             // 
@@ -138,16 +145,70 @@
             this.tbxSelection.TabIndex = 73;
             this.tbxSelection.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // tbxStudentNum
+            // 
+            this.tbxStudentNum.Location = new System.Drawing.Point(118, 542);
+            this.tbxStudentNum.Name = "tbxStudentNum";
+            this.tbxStudentNum.Size = new System.Drawing.Size(100, 20);
+            this.tbxStudentNum.TabIndex = 73;
+            this.tbxStudentNum.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // tbxStudentFaculty
+            // 
+            this.tbxStudentFaculty.Location = new System.Drawing.Point(330, 542);
+            this.tbxStudentFaculty.Name = "tbxStudentFaculty";
+            this.tbxStudentFaculty.Size = new System.Drawing.Size(100, 20);
+            this.tbxStudentFaculty.TabIndex = 73;
+            this.tbxStudentFaculty.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // tbxStudentGender
+            // 
+            this.tbxStudentGender.Location = new System.Drawing.Point(436, 542);
+            this.tbxStudentGender.Name = "tbxStudentGender";
+            this.tbxStudentGender.Size = new System.Drawing.Size(100, 20);
+            this.tbxStudentGender.TabIndex = 73;
+            this.tbxStudentGender.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // tbxElecId
+            // 
+            this.tbxElecId.Location = new System.Drawing.Point(12, 542);
+            this.tbxElecId.Name = "tbxElecId";
+            this.tbxElecId.Size = new System.Drawing.Size(100, 20);
+            this.tbxElecId.TabIndex = 73;
+            this.tbxElecId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // tbxStudentYearOfStudy
+            // 
+            this.tbxStudentYearOfStudy.Location = new System.Drawing.Point(540, 542);
+            this.tbxStudentYearOfStudy.Name = "tbxStudentYearOfStudy";
+            this.tbxStudentYearOfStudy.Size = new System.Drawing.Size(100, 20);
+            this.tbxStudentYearOfStudy.TabIndex = 73;
+            this.tbxStudentYearOfStudy.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // tbxStudentAge
+            // 
+            this.tbxStudentAge.Location = new System.Drawing.Point(224, 542);
+            this.tbxStudentAge.Name = "tbxStudentAge";
+            this.tbxStudentAge.Size = new System.Drawing.Size(100, 20);
+            this.tbxStudentAge.TabIndex = 73;
+            this.tbxStudentAge.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Ballot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(895, 642);
+            this.Controls.Add(this.tbxStudentAge);
             this.Controls.Add(this.tbxInitials);
+            this.Controls.Add(this.tbxStudentYearOfStudy);
             this.Controls.Add(this.tbxSelection);
+            this.Controls.Add(this.tbxElecId);
             this.Controls.Add(this.tbxAge);
+            this.Controls.Add(this.tbxStudentGender);
             this.Controls.Add(this.tbxFaculty);
+            this.Controls.Add(this.tbxStudentFaculty);
             this.Controls.Add(this.tbxLastName);
+            this.Controls.Add(this.tbxStudentNum);
             this.Controls.Add(this.tbxCandID);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnLoadBallot);
@@ -175,5 +236,11 @@
         private System.Windows.Forms.TextBox tbxAge;
         private System.Windows.Forms.TextBox tbxInitials;
         private System.Windows.Forms.TextBox tbxSelection;
+        private System.Windows.Forms.TextBox tbxStudentNum;
+        private System.Windows.Forms.TextBox tbxStudentFaculty;
+        private System.Windows.Forms.TextBox tbxStudentGender;
+        private System.Windows.Forms.TextBox tbxElecId;
+        private System.Windows.Forms.TextBox tbxStudentYearOfStudy;
+        private System.Windows.Forms.TextBox tbxStudentAge;
     }
 }

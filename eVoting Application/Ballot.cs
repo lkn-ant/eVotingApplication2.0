@@ -16,7 +16,41 @@ namespace eVoting_Application
         public Ballot()
         {
             InitializeComponent();
+            FillStudentData();
 
+        }
+
+        private void FillStudentData()
+        {
+            string myConnection = "datasource=localhost;port=3306;username=root;password=root";
+            string Query = "SELECT * FROM evotingapplication.students where studentNumber = '210010011'; ";
+            MySqlConnection condb = new MySqlConnection(myConnection);
+            MySqlCommand cmddb = new MySqlCommand(Query, condb);
+            MySqlDataReader myReader;
+            try
+            {
+                condb.Open();
+                myReader = cmddb.ExecuteReader();
+
+                while (myReader.Read())
+                {
+                    string sAge = myReader.GetInt32("age").ToString();
+                    string sFaculty = myReader.GetString("faculty");
+                    string sGender = myReader.GetString("gender");
+                    string sYearOfStudy = myReader.GetString("yearOfStudy");
+                    tbxStudentAge.Text = sAge;
+                    tbxStudentFaculty.Text = sFaculty;
+                    tbxStudentGender.Text = sGender;
+                    tbxStudentYearOfStudy.Text = sYearOfStudy;
+                    tbxElecId.Text = "2";
+                    tbxStudentNum.Text = "210010011";
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void label23_Click(object sender, EventArgs e)
@@ -107,6 +141,30 @@ namespace eVoting_Application
         {
             
             
+        }
+
+        private void btnVote_Click(object sender, EventArgs e)
+        {
+            string myConnection = "datasource=localhost;port=3306;username=root;password=root";
+            string Query = "insert into evotingapplication.votes (electionID, candID, studentNumber, studentAge, studentFaculty, studentGender, studentYearOfStudy)"
+            + "values ('" + tbxElecId.Text + "', '" + tbxCandID.Text + "', '" + tbxStudentNum.Text + "', '" + tbxStudentAge.Text + "', '" + tbxStudentFaculty.Text + "', '"+tbxStudentGender.Text+"', '"+tbxStudentYearOfStudy.Text+"'); ";
+            MySqlConnection condb = new MySqlConnection(myConnection);
+            MySqlCommand cmddb = new MySqlCommand(Query, condb);
+            MySqlDataReader myReader;
+            try
+            {
+                    condb.Open();
+                    myReader = cmddb.ExecuteReader();
+                    MessageBox.Show("Vote Saved!", "Ballot");
+                    while (myReader.Read())
+                    {
+
+                    }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
