@@ -13,11 +13,41 @@ namespace eVoting_Application
 {
     public partial class Ballot : Form
     {
+        public static int voteCount;
         public Ballot()
         {
             InitializeComponent();
             FillStudentData();
+            FillNumSRC();
+            btnVote.Visible = false;
+            btnFinished.Visible = false;
+            voteCount = 0;
 
+        }
+
+        private void FillNumSRC()
+        {
+            string myConnection = "datasource=localhost;port=3306;username=root;password=root";
+            string Query = "SELECT * FROM evotingapplication.election where electionID = '"+tbxElecId.Text+"'; ";
+            MySqlConnection condb = new MySqlConnection(myConnection);
+            MySqlCommand cmddb = new MySqlCommand(Query, condb);
+            MySqlDataReader myReader;
+            try
+            {
+                condb.Open();
+                myReader = cmddb.ExecuteReader();
+
+                while (myReader.Read())
+                {
+                    string sNumSRC = myReader.GetInt32("numSRC").ToString();
+                    tbxNumSRC.Text = sNumSRC;
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void FillStudentData()
@@ -62,7 +92,7 @@ namespace eVoting_Application
         {
             string myConnection = "datasource=localhost;port=3306;username=root;password=root";
             MySqlConnection myConn = new MySqlConnection(myConnection);
-            MySqlCommand SelectCommand = new MySqlCommand("SELECT candID, initials, lastName, faculty, age FROM evotingapplication.candidate where electionID = 2;", myConn);
+            MySqlCommand SelectCommand = new MySqlCommand("SELECT candID, initials, lastName, faculty, age, image FROM evotingapplication.candidate where electionID = 2;", myConn);
 
             try
             {
@@ -75,8 +105,9 @@ namespace eVoting_Application
                 
                 bSource.DataSource = dbdataset;
                 dataGridView1.DataSource = bSource;
-                
                 sda.Update(dbdataset);
+                btnLoadBallot.Visible = false;
+                btnVote.Visible = true;
                 
                 
             }
@@ -139,7 +170,8 @@ namespace eVoting_Application
 
         private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            
+            dataGridView1.AutoResizeColumns();
+            dataGridView1.AutoResizeRows();
             
         }
 
@@ -156,10 +188,47 @@ namespace eVoting_Application
                     condb.Open();
                     myReader = cmddb.ExecuteReader();
                     MessageBox.Show("Vote Saved!", "Ballot");
+                    int rowIndex = dataGridView1.CurrentCell.RowIndex;
+                    dataGridView1.Rows.RemoveAt(rowIndex);
+                    voteCount = voteCount + 1;
+                    CheckVoteCount();
                     while (myReader.Read())
                     {
 
                     }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void CheckVoteCount()
+        {
+            if (voteCount == Convert.ToInt32(tbxNumSRC.Text))
+            {
+                btnVote.Visible = false;
+                btnFinished.Visible = true;
+            }
+        }
+
+        private void btnFinished_Click(object sender, EventArgs e)
+        {
+            string myConnection = "datasource=localhost;port=3306;username=root;password=root";
+            string Query = "insert into evotingapplication.approvedstudents (voted) values ('yes'); ";
+            MySqlConnection condb = new MySqlConnection(myConnection);
+            MySqlCommand cmddb = new MySqlCommand(Query, condb);
+            MySqlDataReader myReader;
+            try
+            {
+                condb.Open();
+                myReader = cmddb.ExecuteReader();
+                MessageBox.Show("Thank You for Voting", "Ballot");
+
+                while (myReader.Read())
+                {
+
+                }
             }
             catch (Exception ex)
             {
