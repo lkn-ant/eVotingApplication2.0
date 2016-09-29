@@ -30,7 +30,7 @@ namespace eVoting_Application
         private void CandCountLabel()
         {
             string myConnection = "datasource=localhost;port=3306;username=root;password=root";
-            string Query = "SELECT count(*) as numCand FROM evotingapplication.candidate;";
+            string Query = "SELECT count(*) as numCand FROM evotingapplication.candidate where electionID = '"+lblElecID.Text+"';";
             MySqlConnection condb = new MySqlConnection(myConnection);
             MySqlCommand cmddb = new MySqlCommand(Query, condb);
             MySqlDataReader myReader;

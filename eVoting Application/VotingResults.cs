@@ -82,5 +82,12 @@ namespace eVoting_Application
         {
             
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            ElectionStartup es = new ElectionStartup();
+            es.ShowDialog();
+            this.Hide();
+        }
     }
 }

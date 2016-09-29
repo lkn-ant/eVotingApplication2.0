@@ -41,10 +41,11 @@ namespace eVoting_Application
             //Application.Run(new VotingResults(elecID2));
             
 
-            string elecID = "2";
-            Application.Run(new VoterLogin(elecID));
+            //string elecID = "2";
+            //Application.Run(new VoterLogin(elecID));
+            
+            Application.Run(new ElectionStartup());
             this.Hide();
-            //Application.Run(new ElectionStartup());
             
         }
 

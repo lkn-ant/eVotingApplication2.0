@@ -160,6 +160,7 @@
             this.Name = "VoterLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VoterLogin";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.VoterLogin_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

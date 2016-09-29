@@ -39,6 +39,7 @@
             this.btnAverage = new System.Windows.Forms.Button();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblElecID = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.SuspendLayout();
@@ -106,6 +107,16 @@
             this.lblElecID.TabIndex = 3;
             this.lblElecID.Text = "ElecID";
             // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(205, 415);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(85, 42);
+            this.btnExit.TabIndex = 1;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // VotingResults
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,6 +124,7 @@
             this.ClientSize = new System.Drawing.Size(484, 461);
             this.Controls.Add(this.lblElecID);
             this.Controls.Add(this.chart2);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnAverage);
             this.Controls.Add(this.btnCount);
             this.Controls.Add(this.chart1);
@@ -132,5 +144,6 @@
         private System.Windows.Forms.Button btnAverage;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.Label lblElecID;
+        private System.Windows.Forms.Button btnExit;
     }
 }

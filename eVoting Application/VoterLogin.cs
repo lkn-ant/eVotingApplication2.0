@@ -13,6 +13,7 @@ namespace eVoting_Application
 {
     public partial class VoterLogin : Form
     {
+        public static bool isOpen = true;
         public VoterLogin(string id)
         {
             InitializeComponent();
@@ -27,12 +28,43 @@ namespace eVoting_Application
             {
                 btnNext.Visible = false;
             }
-            
             LoadElectionStatus();
+
             if (lblStatus.Text == "Incomplete")
             {
-                ChangeElectionStatus();
-                LoadElectionStatus();
+                ChangeElectionStatusToComplete();
+                
+            }
+            LoadElectionStatus();
+
+            if (sd < dtpCurrentDate.Value && ed < dtpCurrentDate.Value)
+            {
+                ChangeElectionStatusToDone();
+            }
+
+
+
+        }
+
+        private void ChangeElectionStatusToDone()
+        {
+            string myConnection = "datasource=localhost;port=3306;username=root;password=root";
+            string Query = "update evotingapplication.election set status='Done' where electionID='" + lblElecID.Text + "'; ";
+            MySqlConnection condb = new MySqlConnection(myConnection);
+            MySqlCommand cmddb = new MySqlCommand(Query, condb);
+            MySqlDataReader myReader;
+            try
+            {
+                condb.Open();
+                myReader = cmddb.ExecuteReader();
+                while (myReader.Read())
+                {
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -62,7 +94,7 @@ namespace eVoting_Application
             }
         }
 
-        private void ChangeElectionStatus()
+        private void ChangeElectionStatusToComplete()
         {
             string myConnection = "datasource=localhost;port=3306;username=root;password=root";
             string Query = "update evotingapplication.election set status='Complete' where electionID='" + lblElecID.Text + "'; ";
@@ -132,6 +164,7 @@ namespace eVoting_Application
                 {
                     MessageBox.Show("Approved! You can register to vote", "Voting Validation");
                     this.Hide();
+                    isOpen = false;
                     VoterRegistration vr = new VoterRegistration(tbxStudentNum.Text, lblElecID.Text);
                     vr.ShowDialog();
                     this.Controls.Clear();
@@ -181,6 +214,7 @@ namespace eVoting_Application
                 {
                     MessageBox.Show("Login Successful", "Voting Results Admin");
                     string electionID = lblElecID.Text;
+                    isOpen = false;
                     VotingResults vr = new VotingResults(electionID);
                     vr.Show();
                     this.Hide();
@@ -200,6 +234,17 @@ namespace eVoting_Application
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void VoterLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (isOpen == true)
+            {
+                ElectionStartup es = new ElectionStartup();
+                es.Show();
+                this.Hide();
+            }
+            
         }
     }
 }
