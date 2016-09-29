@@ -46,6 +46,7 @@
             this.lblElecID = new System.Windows.Forms.Label();
             this.lblStudentNum = new System.Windows.Forms.Label();
             this.cbxFaculty = new System.Windows.Forms.ComboBox();
+            this.btnFinished = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -232,6 +233,16 @@
             this.cbxFaculty.Size = new System.Drawing.Size(306, 26);
             this.cbxFaculty.TabIndex = 3;
             // 
+            // btnFinished
+            // 
+            this.btnFinished.Location = new System.Drawing.Point(322, 394);
+            this.btnFinished.Name = "btnFinished";
+            this.btnFinished.Size = new System.Drawing.Size(150, 55);
+            this.btnFinished.TabIndex = 7;
+            this.btnFinished.Text = "Finished";
+            this.btnFinished.UseVisualStyleBackColor = true;
+            this.btnFinished.Click += new System.EventHandler(this.btnFinished_Click);
+            // 
             // VoterRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,6 +251,7 @@
             this.ClientSize = new System.Drawing.Size(484, 461);
             this.Controls.Add(this.cbxFaculty);
             this.Controls.Add(this.btnNewElection);
+            this.Controls.Add(this.btnFinished);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cbxYearOfStudy);
@@ -284,5 +296,6 @@
         private System.Windows.Forms.Label lblElecID;
         private System.Windows.Forms.Label lblStudentNum;
         private System.Windows.Forms.ComboBox cbxFaculty;
+        private System.Windows.Forms.Button btnFinished;
     }
 }

@@ -18,6 +18,7 @@ namespace eVoting_Application
             InitializeComponent();
             lblElecID.Text = electionID;
             lblStudentNum.Text = studentNum;
+            btnFinished.Visible = false;
         }
 
         private void btnNewElection_Click(object sender, EventArgs e)
@@ -38,7 +39,11 @@ namespace eVoting_Application
                 {
                     condb.Open();
                     myReader = cmddb.ExecuteReader();
-                    MessageBox.Show("Data Saved", "Voter Registration");
+                    MessageBox.Show("Data Saved", "Voter Registration", MessageBoxButtons.OK);
+                    btnNewElection.Visible = false;
+                    btnReset.Visible = false;
+                    btnFinished.Visible = true;
+
                     while (myReader.Read())
                     {
 
@@ -57,6 +62,17 @@ namespace eVoting_Application
             tbxInitials.Clear();
             tbxLastName.Clear();
             tbxAge.Clear();
+        }
+
+        private void btnFinished_Click(object sender, EventArgs e)
+        {
+            string studentNum = lblStudentNum.Text;
+            string elecID = lblElecID.Text;
+
+
+            Ballot ballot = new Ballot(studentNum, elecID);
+            ballot.Show();
+            this.Hide();
         }
     }
 }

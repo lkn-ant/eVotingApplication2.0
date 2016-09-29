@@ -14,11 +14,19 @@ namespace eVoting_Application
     public partial class Ballot : Form
     {
         public static int voteCount;
-        public Ballot()
+        public Ballot(string studentNumber, string electionID)
         {
             InitializeComponent();
+            
+            string studNum = studentNumber;
+            string elecID = electionID;
+
+            tbxStudentNum.Text = studNum;
+            tbxElecId.Text = elecID;
+            
             FillStudentData();
             FillNumSRC();
+
             btnVote.Visible = false;
             btnFinished.Visible = false;
             voteCount = 0;
@@ -53,7 +61,7 @@ namespace eVoting_Application
         private void FillStudentData()
         {
             string myConnection = "datasource=localhost;port=3306;username=root;password=root";
-            string Query = "SELECT * FROM evotingapplication.students where studentNumber = '210010011'; ";
+            string Query = "SELECT * FROM evotingapplication.students where studentNumber = '"+tbxStudentNum.Text+"'; ";
             MySqlConnection condb = new MySqlConnection(myConnection);
             MySqlCommand cmddb = new MySqlCommand(Query, condb);
             MySqlDataReader myReader;
@@ -72,9 +80,6 @@ namespace eVoting_Application
                     tbxStudentFaculty.Text = sFaculty;
                     tbxStudentGender.Text = sGender;
                     tbxStudentYearOfStudy.Text = sYearOfStudy;
-                    tbxElecId.Text = "2";
-                    tbxStudentNum.Text = "210010011";
-                    
                 }
             }
             catch (Exception ex)
@@ -223,7 +228,14 @@ namespace eVoting_Application
             {
                 condb.Open();
                 myReader = cmddb.ExecuteReader();
-                MessageBox.Show("Thank You for Voting", "Ballot");
+                DialogResult result = MessageBox.Show("Thank You for Voting", "Ballot", MessageBoxButtons.OK);
+                if (result == DialogResult.OK)
+                {
+                    VoterLogin vl = new VoterLogin(tbxElecId.Text);
+                    vl.ShowDialog();
+                    this.Hide();
+
+                }
 
                 while (myReader.Read())
                 {
