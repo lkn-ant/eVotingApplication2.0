@@ -97,7 +97,7 @@ namespace eVoting_Application
         {
             string myConnection = "datasource=localhost;port=3306;username=root;password=root";
             MySqlConnection myConn = new MySqlConnection(myConnection);
-            MySqlCommand SelectCommand = new MySqlCommand("SELECT candID, initials, lastName, faculty, age, image FROM evotingapplication.candidate where electionID = 2;", myConn);
+            MySqlCommand SelectCommand = new MySqlCommand("SELECT candID, initials, lastName, faculty, age, image FROM evotingapplication.candidate where electionID = '"+tbxElecId.Text+"';", myConn);
 
             try
             {
