@@ -108,6 +108,7 @@
             this.btnVotingResults.TabIndex = 11;
             this.btnVotingResults.Text = "VotingResults";
             this.btnVotingResults.UseVisualStyleBackColor = true;
+            this.btnVotingResults.Click += new System.EventHandler(this.btnVotingResults_Click);
             // 
             // lblStartDate
             // 

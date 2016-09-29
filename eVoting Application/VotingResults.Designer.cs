@@ -38,6 +38,7 @@
             this.btnCount = new System.Windows.Forms.Button();
             this.btnAverage = new System.Windows.Forms.Button();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.lblElecID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.SuspendLayout();
@@ -96,11 +97,21 @@
             this.chart2.TabIndex = 2;
             this.chart2.Text = "chart2";
             // 
+            // lblElecID
+            // 
+            this.lblElecID.AutoSize = true;
+            this.lblElecID.Location = new System.Drawing.Point(437, 430);
+            this.lblElecID.Name = "lblElecID";
+            this.lblElecID.Size = new System.Drawing.Size(39, 13);
+            this.lblElecID.TabIndex = 3;
+            this.lblElecID.Text = "ElecID";
+            // 
             // VotingResults
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.lblElecID);
             this.Controls.Add(this.chart2);
             this.Controls.Add(this.btnAverage);
             this.Controls.Add(this.btnCount);
@@ -110,6 +121,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -119,5 +131,6 @@
         private System.Windows.Forms.Button btnCount;
         private System.Windows.Forms.Button btnAverage;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.Label lblElecID;
     }
 }

@@ -156,5 +156,50 @@ namespace eVoting_Application
         {
             
         }
+
+        private void btnVotingResults_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string myConnection = "datasource=localhost;port=3306;username=root;password=root";
+                MySqlConnection myConn = new MySqlConnection(myConnection);
+
+                MySqlCommand SelectCommand = new MySqlCommand("SELECT * FROM evotingapplication.approvedstudents where studentNumber='" + this.tbxStudentNum.Text + "' and electionID='" + lblElecID.Text + "' and voted = 'admin';", myConn);
+
+                MySqlDataReader myReader;
+                myConn.Open();
+                myReader = SelectCommand.ExecuteReader();
+
+
+                int count = 0;
+                //This while condition checks if there is a duplicate user
+                while (myReader.Read())
+                {
+                    count = count + 1;
+                }
+                if (count == 1)
+                {
+                    MessageBox.Show("Login Successful", "Voting Results Admin");
+                    string electionID = lblElecID.Text;
+                    VotingResults vr = new VotingResults(electionID);
+                    vr.Show();
+                    this.Hide();
+                    
+                }
+                else if (count > 1)
+                {
+                    MessageBox.Show("There is more than one record of this administrator...Contact SRC Office!", "Voting Result Validation");
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect Admin ID. Contact SRC Office!", "Voting Result Validation");
+                    myConn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

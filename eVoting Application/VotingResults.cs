@@ -13,9 +13,10 @@ namespace eVoting_Application
 {
     public partial class VotingResults : Form
     {
-        public VotingResults()
+        public VotingResults(string elecID)
         {
             InitializeComponent();
+            lblElecID.Text = elecID;
             chart1.Visible = false;
             chart2.Visible = false;
             
@@ -25,10 +26,11 @@ namespace eVoting_Application
         {
             chart1.Visible = true;
             chart2.Visible = false;
+            int electionID = Convert.ToInt32(lblElecID.Text);
             
 
             string myConnection = "datasource=localhost;port=3306;username=root;password=root";
-            string Query = "SELECT evotingapplication.votes.candID, evotingapplication.candidate.lastName, evotingapplication.candidate.initials,count(*) as 'Vote Count' FROM evotingapplication.votes INNER JOIN evotingapplication.candidate ON evotingapplication.votes.candID = evotingapplication.candidate.candID where evotingapplication.votes.electionID = 2 GROUP BY evotingapplication.votes.candID;";
+            string Query = "CALL `evotingapplication`.`new_procedure`('"+electionID+"');";
             MySqlConnection condb = new MySqlConnection(myConnection);
             MySqlCommand cmddb = new MySqlCommand(Query, condb);
             MySqlDataReader myReader;
@@ -53,9 +55,10 @@ namespace eVoting_Application
         {
             chart1.Visible = false;
             chart2.Visible = true;
+            int electionID = Convert.ToInt32(lblElecID.Text);
             
             string myConnection = "datasource=localhost;port=3306;username=root;password=root";
-            string Query = "SELECT evotingapplication.votes.candID, evotingapplication.candidate.lastName, evotingapplication.candidate.initials, avg(evotingapplication.votes.studentAge) as 'Average Age' FROM evotingapplication.votes INNER JOIN evotingapplication.candidate ON evotingapplication.votes.candID = evotingapplication.candidate.candID where evotingapplication.votes.electionID = 2 GROUP BY evotingapplication.votes.candID;";
+            string Query = "CALL `evotingapplication`.`new_procedure2`('"+electionID+"');";
             MySqlConnection condb = new MySqlConnection(myConnection);
             MySqlCommand cmddb = new MySqlCommand(Query, condb);
             MySqlDataReader myReader;
