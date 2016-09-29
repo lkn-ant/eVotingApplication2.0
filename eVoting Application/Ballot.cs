@@ -220,7 +220,7 @@ namespace eVoting_Application
         private void btnFinished_Click(object sender, EventArgs e)
         {
             string myConnection = "datasource=localhost;port=3306;username=root;password=root";
-            string Query = "insert into evotingapplication.approvedstudents (voted) values ('yes'); ";
+            string Query = "update evotingapplication.approvedstudents set voted ='yes' where studentNumber='"+tbxStudentNum.Text+"' and electionID='"+tbxElecId+"'); ";
             MySqlConnection condb = new MySqlConnection(myConnection);
             MySqlCommand cmddb = new MySqlCommand(Query, condb);
             MySqlDataReader myReader;
