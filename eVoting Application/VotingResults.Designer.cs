@@ -34,6 +34,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VotingResults));
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnCount = new System.Windows.Forms.Button();
             this.btnAverage = new System.Windows.Forms.Button();
@@ -106,6 +107,7 @@
             this.lblElecID.Size = new System.Drawing.Size(39, 13);
             this.lblElecID.TabIndex = 3;
             this.lblElecID.Text = "ElecID";
+            this.lblElecID.Visible = false;
             // 
             // btnExit
             // 
@@ -121,6 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(484, 461);
             this.Controls.Add(this.lblElecID);
             this.Controls.Add(this.chart2);
@@ -128,7 +131,9 @@
             this.Controls.Add(this.btnAverage);
             this.Controls.Add(this.btnCount);
             this.Controls.Add(this.chart1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VotingResults";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VotingResults";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();

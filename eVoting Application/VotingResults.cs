@@ -13,6 +13,9 @@ namespace eVoting_Application
 {
     public partial class VotingResults : Form
     {
+        public static bool voteClick = false;
+        public static bool ageClick = false;
+
         public VotingResults(string elecID)
         {
             InitializeComponent();
@@ -26,28 +29,33 @@ namespace eVoting_Application
         {
             chart1.Visible = true;
             chart2.Visible = false;
-            int electionID = Convert.ToInt32(lblElecID.Text);
-            
-
-            string myConnection = "datasource=localhost;port=3306;username=root;password=root";
-            string Query = "CALL `evotingapplication`.`new_procedure`('"+electionID+"');";
-            MySqlConnection condb = new MySqlConnection(myConnection);
-            MySqlCommand cmddb = new MySqlCommand(Query, condb);
-            MySqlDataReader myReader;
-            try
+            if (ageClick == false)
             {
-                condb.Open();
-                myReader = cmddb.ExecuteReader();
+                ageClick = true;
+                int electionID = Convert.ToInt32(lblElecID.Text);
 
-                while (myReader.Read())
+
+                string myConnection = "datasource=localhost;port=3306;username=root;password=root";
+                string Query = "CALL `evotingapplication`.`new_procedure`('" + electionID + "');";
+                MySqlConnection condb = new MySqlConnection(myConnection);
+                MySqlCommand cmddb = new MySqlCommand(Query, condb);
+                MySqlDataReader myReader;
+                try
                 {
-                    this.chart1.Series["Votes"].Points.AddXY(myReader.GetString("lastName"), myReader.GetInt32("Vote Count"));
+                    condb.Open();
+                    myReader = cmddb.ExecuteReader();
+
+                    while (myReader.Read())
+                    {
+                        this.chart1.Series["Votes"].Points.AddXY(myReader.GetString("lastName"), myReader.GetInt32("Vote Count"));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
 
         }
 
@@ -55,27 +63,32 @@ namespace eVoting_Application
         {
             chart1.Visible = false;
             chart2.Visible = true;
-            int electionID = Convert.ToInt32(lblElecID.Text);
-            
-            string myConnection = "datasource=localhost;port=3306;username=root;password=root";
-            string Query = "CALL `evotingapplication`.`new_procedure2`('"+electionID+"');";
-            MySqlConnection condb = new MySqlConnection(myConnection);
-            MySqlCommand cmddb = new MySqlCommand(Query, condb);
-            MySqlDataReader myReader;
-            try
+            if (voteClick == false)
             {
-                condb.Open();
-                myReader = cmddb.ExecuteReader();
+                voteClick = true;
+                int electionID = Convert.ToInt32(lblElecID.Text);
 
-                while (myReader.Read())
+                string myConnection = "datasource=localhost;port=3306;username=root;password=root";
+                string Query = "CALL `evotingapplication`.`new_procedure2`('" + electionID + "');";
+                MySqlConnection condb = new MySqlConnection(myConnection);
+                MySqlCommand cmddb = new MySqlCommand(Query, condb);
+                MySqlDataReader myReader;
+                try
                 {
-                    this.chart2.Series["Votes"].Points.AddXY(myReader.GetString("lastName"), myReader.GetInt32("Average Age"));
+                    condb.Open();
+                    myReader = cmddb.ExecuteReader();
+
+                    while (myReader.Read())
+                    {
+                        this.chart2.Series["Votes"].Points.AddXY(myReader.GetString("lastName"), myReader.GetInt32("Average Age"));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
         }
 
         private void btnGender_Click(object sender, EventArgs e)
