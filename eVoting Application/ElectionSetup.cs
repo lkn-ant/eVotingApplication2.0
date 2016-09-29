@@ -36,10 +36,15 @@ namespace eVoting_Application
 
         public ElectionSetup()
         {
+
+            Application.Run(new VotingResults());
+            this.Hide();
+
             //string elecID = "2";
             //Application.Run(new VoterLogin(elecID));
-            Application.Run(new ElectionStartup());
-            this.Hide();
+            
+            //Application.Run(new ElectionStartup());
+            
         }
 
         private void ElectionSetup_Load(object sender, EventArgs e)
