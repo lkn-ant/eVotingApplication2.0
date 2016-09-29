@@ -106,6 +106,7 @@
             this.tbxCandID.Name = "tbxCandID";
             this.tbxCandID.Size = new System.Drawing.Size(100, 20);
             this.tbxCandID.TabIndex = 73;
+            this.tbxCandID.Visible = false;
             this.tbxCandID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tbxLastName
@@ -114,6 +115,7 @@
             this.tbxLastName.Name = "tbxLastName";
             this.tbxLastName.Size = new System.Drawing.Size(100, 20);
             this.tbxLastName.TabIndex = 73;
+            this.tbxLastName.Visible = false;
             this.tbxLastName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tbxFaculty
@@ -122,6 +124,7 @@
             this.tbxFaculty.Name = "tbxFaculty";
             this.tbxFaculty.Size = new System.Drawing.Size(100, 20);
             this.tbxFaculty.TabIndex = 73;
+            this.tbxFaculty.Visible = false;
             this.tbxFaculty.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tbxAge
@@ -130,6 +133,7 @@
             this.tbxAge.Name = "tbxAge";
             this.tbxAge.Size = new System.Drawing.Size(100, 20);
             this.tbxAge.TabIndex = 73;
+            this.tbxAge.Visible = false;
             this.tbxAge.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tbxInitials
@@ -138,6 +142,7 @@
             this.tbxInitials.Name = "tbxInitials";
             this.tbxInitials.Size = new System.Drawing.Size(100, 20);
             this.tbxInitials.TabIndex = 73;
+            this.tbxInitials.Visible = false;
             this.tbxInitials.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tbxNumSRC
@@ -146,6 +151,7 @@
             this.tbxNumSRC.Name = "tbxNumSRC";
             this.tbxNumSRC.Size = new System.Drawing.Size(100, 20);
             this.tbxNumSRC.TabIndex = 73;
+            this.tbxNumSRC.Visible = false;
             this.tbxNumSRC.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tbxStudentNum
@@ -154,6 +160,7 @@
             this.tbxStudentNum.Name = "tbxStudentNum";
             this.tbxStudentNum.Size = new System.Drawing.Size(100, 20);
             this.tbxStudentNum.TabIndex = 73;
+            this.tbxStudentNum.Visible = false;
             this.tbxStudentNum.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tbxStudentFaculty
@@ -162,6 +169,7 @@
             this.tbxStudentFaculty.Name = "tbxStudentFaculty";
             this.tbxStudentFaculty.Size = new System.Drawing.Size(100, 20);
             this.tbxStudentFaculty.TabIndex = 73;
+            this.tbxStudentFaculty.Visible = false;
             this.tbxStudentFaculty.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tbxStudentGender
@@ -170,6 +178,7 @@
             this.tbxStudentGender.Name = "tbxStudentGender";
             this.tbxStudentGender.Size = new System.Drawing.Size(100, 20);
             this.tbxStudentGender.TabIndex = 73;
+            this.tbxStudentGender.Visible = false;
             this.tbxStudentGender.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tbxElecId
@@ -178,6 +187,7 @@
             this.tbxElecId.Name = "tbxElecId";
             this.tbxElecId.Size = new System.Drawing.Size(100, 20);
             this.tbxElecId.TabIndex = 73;
+            this.tbxElecId.Visible = false;
             this.tbxElecId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tbxStudentYearOfStudy
@@ -186,6 +196,7 @@
             this.tbxStudentYearOfStudy.Name = "tbxStudentYearOfStudy";
             this.tbxStudentYearOfStudy.Size = new System.Drawing.Size(100, 20);
             this.tbxStudentYearOfStudy.TabIndex = 73;
+            this.tbxStudentYearOfStudy.Visible = false;
             this.tbxStudentYearOfStudy.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tbxStudentAge
@@ -194,6 +205,7 @@
             this.tbxStudentAge.Name = "tbxStudentAge";
             this.tbxStudentAge.Size = new System.Drawing.Size(100, 20);
             this.tbxStudentAge.TabIndex = 73;
+            this.tbxStudentAge.Visible = false;
             this.tbxStudentAge.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnFinished
@@ -211,6 +223,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(895, 642);
             this.Controls.Add(this.tbxStudentAge);
             this.Controls.Add(this.tbxInitials);
