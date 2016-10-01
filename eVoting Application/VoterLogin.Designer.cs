@@ -89,6 +89,7 @@
             this.lblElecID.Size = new System.Drawing.Size(60, 18);
             this.lblElecID.TabIndex = 8;
             this.lblElecID.Text = "ElecID";
+            this.lblElecID.Visible = false;
             // 
             // lblStatus
             // 
@@ -99,6 +100,7 @@
             this.lblStatus.Size = new System.Drawing.Size(126, 18);
             this.lblStatus.TabIndex = 8;
             this.lblStatus.Text = "ElectionStatus";
+            this.lblStatus.Visible = false;
             // 
             // btnVotingResults
             // 
@@ -119,6 +121,7 @@
             this.lblStartDate.Size = new System.Drawing.Size(66, 13);
             this.lblStartDate.TabIndex = 8;
             this.lblStartDate.Text = "Start Date";
+            this.lblStartDate.Visible = false;
             // 
             // lblEndDate
             // 
@@ -129,6 +132,7 @@
             this.lblEndDate.Size = new System.Drawing.Size(59, 13);
             this.lblEndDate.TabIndex = 8;
             this.lblEndDate.Text = "End Date";
+            this.lblEndDate.Visible = false;
             // 
             // dtpCurrentDate
             // 
@@ -139,6 +143,7 @@
             this.dtpCurrentDate.Name = "dtpCurrentDate";
             this.dtpCurrentDate.Size = new System.Drawing.Size(200, 27);
             this.dtpCurrentDate.TabIndex = 12;
+            this.dtpCurrentDate.Visible = false;
             // 
             // VoterLogin
             // 

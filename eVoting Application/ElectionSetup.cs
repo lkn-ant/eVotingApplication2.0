@@ -74,11 +74,18 @@ namespace eVoting_Application
                 {
                     condb.Open();
                     myReader = cmddb.ExecuteReader();
-                    MessageBox.Show("Election Created");
+                    DialogResult result = MessageBox.Show("Election Saved", "Candidate", MessageBoxButtons.OK);
+
+                    if (result == DialogResult.OK)
+                    {
+                        OpenAddCandidate();
+                    }
                     while (myReader.Read())
                     {
 
                     }
+                    myReader.Close();
+                    cmddb.Connection.Close();
                 }
                 catch (Exception ex)
                 {
@@ -88,6 +95,32 @@ namespace eVoting_Application
             
             
             
+        }
+
+        private void OpenAddCandidate()
+        {
+            string myConnection = "datasource=localhost;port=3306;username=root;password=root";
+            string Query = "SELECT max(electionID) as max from evotingapplication.election ;";
+            MySqlConnection condb = new MySqlConnection(myConnection);
+            MySqlCommand cmddb = new MySqlCommand(Query, condb);
+            MySqlDataReader myReader;
+            try
+            {
+                condb.Open();
+                myReader = cmddb.ExecuteReader();
+
+                while (myReader.Read())
+                {
+                    int iCount = myReader.GetInt32("max");
+                    Add_Candidates ac = new Add_Candidates(iCount);
+                    ac.ShowDialog();
+                    this.Hide();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void ElectionSetup_FormClosing(object sender, FormClosingEventArgs e)

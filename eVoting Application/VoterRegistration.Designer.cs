@@ -206,6 +206,7 @@
             this.lblElecID.Size = new System.Drawing.Size(60, 18);
             this.lblElecID.TabIndex = 12;
             this.lblElecID.Text = "ElecID";
+            this.lblElecID.Visible = false;
             // 
             // lblStudentNum
             // 
@@ -216,6 +217,7 @@
             this.lblStudentNum.Size = new System.Drawing.Size(109, 18);
             this.lblStudentNum.TabIndex = 12;
             this.lblStudentNum.Text = "StudentNum";
+            this.lblStudentNum.Visible = false;
             // 
             // cbxFaculty
             // 

@@ -49,7 +49,6 @@
             this.lblX = new System.Windows.Forms.Label();
             this.lblOf = new System.Windows.Forms.Label();
             this.lblY = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.pbxCandidatePhoto = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbxFaculty = new System.Windows.Forms.ComboBox();
@@ -68,6 +67,7 @@
             this.lblElecYear.Size = new System.Drawing.Size(77, 18);
             this.lblElecYear.TabIndex = 1;
             this.lblElecYear.Text = "ElecYear";
+            this.lblElecYear.Visible = false;
             // 
             // btnUploadImage
             // 
@@ -161,6 +161,7 @@
             // 
             this.tbxInitials.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxInitials.Location = new System.Drawing.Point(266, 186);
+            this.tbxInitials.MaxLength = 5;
             this.tbxInitials.Name = "tbxInitials";
             this.tbxInitials.Size = new System.Drawing.Size(207, 27);
             this.tbxInitials.TabIndex = 2;
@@ -261,15 +262,6 @@
             this.lblY.TabIndex = 1;
             this.lblY.Text = "y";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(166, 394);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 55);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "View Candidates";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // pbxCandidatePhoto
             // 
             this.pbxCandidatePhoto.Location = new System.Drawing.Point(13, 153);
@@ -345,7 +337,6 @@
             this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.lblInitials);
             this.Controls.Add(this.lblStudentNum);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnSaveCandidate);
             this.Controls.Add(this.btnUploadImage);
             this.Controls.Add(this.pbxCandidatePhoto);
@@ -391,7 +382,6 @@
         private System.Windows.Forms.Label lblX;
         private System.Windows.Forms.Label lblOf;
         private System.Windows.Forms.Label lblY;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox cbxFaculty;
         private System.Windows.Forms.Label lblElecID;
         private System.Windows.Forms.TextBox tbxImagePath;

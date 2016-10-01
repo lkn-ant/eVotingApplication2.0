@@ -85,6 +85,7 @@
             this.lblElectionStatus.Size = new System.Drawing.Size(118, 13);
             this.lblElectionStatus.TabIndex = 8;
             this.lblElectionStatus.Text = "Complete or Incomplete";
+            this.lblElectionStatus.Visible = false;
             // 
             // lblElectionID
             // 
