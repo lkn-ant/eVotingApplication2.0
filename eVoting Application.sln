@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eVoting Application", "eVoting Application\eVoting Application.csproj", "{66AFA6A8-3412-4414-A350-DC410C71E1F7}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Installer", "Installer\Installer.vdproj", "{0373E9A9-0D6D-4764-936B-C7D8DDA48C03}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{66AFA6A8-3412-4414-A350-DC410C71E1F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66AFA6A8-3412-4414-A350-DC410C71E1F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66AFA6A8-3412-4414-A350-DC410C71E1F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0373E9A9-0D6D-4764-936B-C7D8DDA48C03}.Debug|Any CPU.ActiveCfg = Debug
+		{0373E9A9-0D6D-4764-936B-C7D8DDA48C03}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
