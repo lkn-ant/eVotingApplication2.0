@@ -160,7 +160,6 @@
             this.tbxStudentNum.Name = "tbxStudentNum";
             this.tbxStudentNum.Size = new System.Drawing.Size(100, 20);
             this.tbxStudentNum.TabIndex = 73;
-            this.tbxStudentNum.Visible = false;
             this.tbxStudentNum.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tbxStudentFaculty
@@ -187,7 +186,6 @@
             this.tbxElecId.Name = "tbxElecId";
             this.tbxElecId.Size = new System.Drawing.Size(100, 20);
             this.tbxElecId.TabIndex = 73;
-            this.tbxElecId.Visible = false;
             this.tbxElecId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tbxStudentYearOfStudy
